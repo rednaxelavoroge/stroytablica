@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>СтройТаблица — ИИ-аналитик Excel-таблиц для стройки. В Telegram, по-русски</title>
+<meta name="description" content="Пришлите боту таблицу — учёт материалов, план-факт, прайс — и задавайте вопросы обычным текстом. Ошибки, дубли, сводки — за секунды. Бесплатно до 3 файлов в месяц, без карты.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="СтройТаблица">
+<meta property="og:url" content="https://stroytablica.ru/">
+<meta property="og:title" content="СтройТаблица — Excel-таблицы отвечают на вопросы. В Telegram">
+<meta property="og:description" content="Пришлите боту таблицу и спрашивайте по-русски: ошибки в суммах, дубли, сводки — за секунды. Бесплатно до 3 файлов в месяц, без карты.">
+<meta property="og:image" content="https://stroytablica.netlify.app/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="ru_RU">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://stroytablica.netlify.app/og.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8F%97%3C/text%3E%3C/svg%3E">
+<link rel="canonical" href="https://stroytablica.ru/">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"СтройТаблица","operatingSystem":"Telegram","applicationCategory":"BusinessApplication","description":"ИИ-аналитик Excel-таблиц для строительных компаний в Telegram: находит ошибки в суммах, дубли, строит сводки и план-факт по вопросу на русском языке. Расчёты выполняет база данных, поэтому цифры точные.","url":"https://stroytablica.ru/","offers":[{"@type":"Offer","name":"Бесплатный","price":"0","priceCurrency":"RUB"},{"@type":"Offer","name":"Старт","price":"990","priceCurrency":"RUB"},{"@type":"Offer","name":"Бизнес","price":"2990","priceCurrency":"RUB"},{"@type":"Offer","name":"Команда","price":"6900","priceCurrency":"RUB"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Куда попадают данные и безопасно ли это?","acceptedAnswer":{"@type":"Answer","text":"Файл загружается в изолированную базу данных. В нейросеть таблица целиком не передаётся — только названия колонок и несколько первых строк. Расчёты выполняет база данных, поэтому цифры точные."}},
+{"@type":"Question","name":"Какие файлы поддерживаются?","acceptedAnswer":{"@type":"Answer","text":"xlsx, xls, csv и ods — Excel любой версии вплоть до 2003, МойОфис, Р7-Офис, LibreOffice и выгрузки из 1С. Размер до 20 МБ."}},
+{"@type":"Question","name":"Нужен ли Microsoft Office?","acceptedAnswer":{"@type":"Answer","text":"Нет. Бот читает сам файл и не встраивается в Excel — версия офисного пакета не имеет значения."}},
+{"@type":"Question","name":"Сколько это стоит?","acceptedAnswer":{"@type":"Answer","text":"Бесплатно: 3 файла в месяц. Платные тарифы от 990 ₽ в месяц, при оплате за год — два месяца в подарок."}},
+{"@type":"Question","name":"Работает ли в Казахстане, Грузии, Беларуси, Армении?","acceptedAnswer":{"@type":"Answer","text":"Да, везде, где работает Telegram."}}
+]}
+</script>
+<style>
+:root{--ink:#101623;--mut:#5b6472;--amber:#f59e0b;--amber-d:#d97706;--bg:#f6f7f9;--card:#fff;--line:#e6e8ec;--tg:#2aabee;--wa:#25d366;--ok:#16a34a;--no:#dc2626}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
+.wrap{max-width:1060px;margin:0 auto;padding:0 20px}
+nav{position:sticky;top:0;background:rgba(255,255,255,.93);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:10}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font-weight:800;font-size:1.15rem;text-decoration:none;color:var(--ink)}
+nav .links{display:flex;gap:20px;align-items:center}
+nav .links a{color:var(--mut);text-decoration:none;font-size:.94rem}
+.btn{display:inline-block;background:var(--amber);color:#fff;font-weight:700;padding:13px 28px;border-radius:10px;text-decoration:none;transition:.15s}
+.btn:hover{background:var(--amber-d)}
+.btn.sm{padding:8px 18px;font-size:.92rem}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+.hero{background:linear-gradient(160deg,#0e1726 0%,#1a2740 70%,#233252 100%);color:#fff;padding:68px 0 80px}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.hero h1{font-size:2.35rem;line-height:1.2;margin-bottom:18px}
+.hero h1 em{color:var(--amber);font-style:normal}
+.hero p.sub{color:#c6cede;font-size:1.1rem;margin-bottom:26px}
+.hero .note{color:#8d97ab;font-size:.9rem;margin-top:12px}
+.chat{background:#fff;border-radius:16px;padding:18px;box-shadow:0 18px 50px rgba(0,0,0,.35);max-width:430px;margin-left:auto}
+.chat .head{display:flex;align-items:center;gap:10px;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:12px}
+.chat .ava{width:34px;height:34px;border-radius:50%;background:var(--amber);display:flex;align-items:center;justify-content:center;font-size:1.05rem}
+.chat .head b{font-size:.95rem;color:var(--ink)}
+.chat .head span{display:block;font-size:.75rem;color:var(--tg)}
+.msg{max-width:88%;padding:9px 13px;border-radius:12px;font-size:.83rem;margin-bottom:9px;color:var(--ink);white-space:pre-line}
+.msg.user{background:#e3f1fd;margin-left:auto;border-bottom-right-radius:4px}
+.msg.bot{background:#f2f3f6;border-bottom-left-radius:4px}
+section{padding:60px 0}
+section h2{font-size:1.8rem;margin-bottom:8px}
+section p.lead{color:var(--mut);margin-bottom:32px;max-width:720px;font-size:1.02rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px}
+.card .ico{font-size:1.6rem;margin-bottom:10px}
+.card h3{font-size:1.05rem;margin-bottom:8px}
+.card p{color:var(--mut);font-size:.93rem}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;counter-reset:st}
+.step{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px 24px 22px;position:relative}
+.step::before{counter-increment:st;content:counter(st);position:absolute;top:-14px;left:20px;background:var(--amber);color:#fff;font-weight:800;width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.95rem}
+.step h3{margin:6px 0;font-size:1rem}
+.step p{color:var(--mut);font-size:.92rem}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+.chip{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:9px 16px;font-size:.88rem;color:var(--ink)}
+.chip::before{content:'«'}
+.chip::after{content:'»'}
+.tblwrap{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:#fff}
+table{border-collapse:collapse;width:100%;min-width:640px;font-size:.92rem}
+th,td{padding:13px 16px;text-align:left;border-bottom:1px solid var(--line)}
+th{background:#fafbfc;font-size:.85rem;color:var(--mut)}
+td:first-child{font-weight:600}
+thead th:nth-child(2){color:var(--amber-d);font-weight:800}
+.ok{color:var(--ok);font-weight:700}
+.no{color:var(--no);font-weight:700}
+.plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;align-items:stretch}
+.plan{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px;display:flex;flex-direction:column}
+.plan.hot{border:2px solid var(--amber);position:relative}
+.plan.hot::before{content:'Популярный';position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--amber);color:#fff;font-size:.72rem;font-weight:700;padding:3px 12px;border-radius:20px}
+.plan h3{font-size:1.05rem}
+.plan .price{font-size:1.9rem;font-weight:800;margin:10px 0 2px}
+.plan .price span{font-size:.85rem;font-weight:400;color:var(--mut)}
+.plan ul{list-style:none;margin:16px 0 22px;flex:1}
+.plan li{font-size:.9rem;color:var(--mut);padding:5px 0 5px 24px;position:relative}
+.plan li::before{content:'✓';position:absolute;left:2px;color:var(--amber);font-weight:700}
+details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 20px;margin-bottom:10px}
+summary{font-weight:600;cursor:pointer}
+details p{color:var(--mut);margin-top:10px;font-size:.95rem}
+.implant{margin-top:26px;background:linear-gradient(160deg,#0e1726,#233252);border-radius:14px;padding:28px 30px;color:#fff;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.implant h3{margin-bottom:6px}
+.implant p{color:#c6cede;font-size:.95rem;max-width:640px}
+.cta-end{background:linear-gradient(160deg,#0e1726,#233252);color:#fff;text-align:center;border-radius:18px;padding:52px 28px;margin:16px 0 56px}
+.cta-end h2{margin-bottom:10px}
+.cta-end p{color:#c6cede;margin-bottom:24px}
+footer{border-top:1px solid var(--line);padding:26px 0;color:var(--mut);font-size:.9rem}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+footer a{color:var(--mut)}
+@media(max-width:820px){.hero .wrap{grid-template-columns:1fr}.hero h1{font-size:1.85rem}.chat{margin:0 auto}nav .links a:not(.btn){display:none}}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+<a class="logo" href="#">🏗 СтройТаблица</a>
+<div class="links">
+<a href="#what">Что это</a><a href="#feat">Что умеет</a><a href="#comp">Сравнение</a><a href="#plans">Тарифы</a><a href="#partners">Партнёрам</a>
+<a class="btn sm" href="https://t.me/stroytablica_bot">Открыть бота</a>
+</div>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+<div>
+<h1>Ваши Excel-таблицы <em>отвечают на вопросы</em>. По-русски. В Telegram.</h1>
+<p class="sub">Пришлите боту учёт материалов, план-факт или прайс — и спрашивайте обычным текстом, как у коллеги. Ошибки в суммах, дубли, сводки по поставщикам — за секунды, а не за вечер с фильтрами и ФОРМУЛАМИ.</p>
+<a class="btn" href="https://t.me/stroytablica_bot">Попробовать бесплатно</a>
+<p class="note">3 файла в месяц бесплатно · без карты · без установки · без обучения</p>
+</div>
+<div class="chat">
+<div class="head"><div class="ava">🏗</div><div><b>СтройТаблица</b><span>бот</span></div></div>
+<div class="msg user">📎 Материалы_ЖК_Луговая12.xlsx</div>
+<div class="msg bot">✅ 603 строки, 11 колонок. Задавайте вопросы!</div>
+<div class="msg user">Найди строки, где сумма не сходится с кол-во × цена</div>
+<div class="msg bot">⚠️ Нашёл 6 строк с расхождением:
+• Строка 376: Арматура А500С d16 — в файле 4 550 856 ₽, по расчёту 3 374 728 ₽, отклонение +1 176 128 ₽
+• Строка 385: Раствор М150 — +75 233 ₽…</div>
+<div class="msg user">Есть ли дубли?</div>
+<div class="msg bot">Да, 3 пары полных дублей: строки 25 и 602, 11 и 601, 60 и 603.</div>
+</div>
+</div></header>
+
+<section id="what" style="background:#fff"><div class="wrap">
+<h2>Что это такое — простыми словами</h2>
+<p class="lead">СтройТаблица — это бот в Telegram, которому вы отправляете свой обычный Excel-файл — тот самый, в котором снабженец ведёт закупки, а ПТО — план-факт. Дальше вы пишете вопрос словами, как написали бы сотруднику: «сколько потратили на бетон в мае?» — и через несколько секунд получаете точный ответ с цифрами и номерами строк. Не нужно знать формулы, сводные таблицы и фильтры. Не нужно ничего устанавливать и никого обучать. Если вы умеете отправить файл в Telegram — вы уже умеете всё.</p>
+<div class="steps">
+<div class="step"><h3>Ваш файл</h3><p>Любая таблица: учёт материалов, ведомость, прайсы, план-факт. Как есть, без подготовки — даже с «кривой» шапкой.</p></div>
+<div class="step"><h3>Ваш вопрос</h3><p>Обычными словами, по-русски. Можно с телефона, прямо с объекта.</p></div>
+<div class="step"><h3>Точный ответ</h3><p>Цифры считает база данных, а не нейросеть «на глазок». Каждая находка — с номером строки исходного файла.</p></div>
+</div>
+</div></section>
+
+<section id="feat"><div class="wrap">
+<h2>Что умеет бот</h2>
+<p class="lead">Шесть задач, которые сейчас съедают часы работы в Excel — бот делает их за секунды.</p>
+<div class="grid">
+<div class="card"><div class="ico">🔍</div><h3>Находит ошибки в суммах</h3><p>Сумма не сходится с количеством × ценой? Бот найдёт каждую такую строку и покажет размер расхождения в рублях. Одна найденная ошибка в накладной окупает подписку на годы вперёд.</p></div>
+<div class="card"><div class="ico">👥</div><h3>Ловит дубли и пропуски</h3><p>Задвоенные накладные, повторные позиции, пустые цены и количества — всё, что теряется в сотнях строк, бот выводит списком с номерами строк.</p></div>
+<div class="card"><div class="ico">📊</div><h3>Строит сводки</h3><p>По поставщикам, объектам, месяцам, категориям — по любой колонке вашего файла. То, ради чего раньше строили сводные таблицы часами.</p></div>
+<div class="card"><div class="ico">📉</div><h3>План-факт и перерасход</h3><p>«Где перерасход больше 10%?» — и через секунды список статей и объектов, где бюджет ушёл в минус, с цифрами.</p></div>
+<div class="card"><div class="ico">⚖️</div><h3>Сравнивает прайсы</h3><p>Загрузите прайс с ценами нескольких поставщиков — и спрашивайте, у кого дешевле конкретная позиция или весь заказ целиком.</p></div>
+<div class="card"><div class="ico">💰</div><h3>Следит за оплатами</h3><p>«Сколько не оплачено и кому?» — мгновенная картина по дебиторке и незакрытым позициям из вашей же таблицы.</p></div>
+</div>
+<p class="lead" style="margin:34px 0 12px;font-weight:600;color:var(--ink)">Примеры вопросов, которые можно задать прямо сейчас:</p>
+<div class="chips">
+<span class="chip">Сколько потрачено на арматуру в марте?</span>
+<span class="chip">Найди строки, где сумма не сходится</span>
+<span class="chip">Есть ли дубли?</span>
+<span class="chip">Сводка по поставщикам</span>
+<span class="chip">У кого дешевле кирпич М150?</span>
+<span class="chip">Где перерасход больше 10%?</span>
+<span class="chip">Топ-10 самых дорогих закупок</span>
+<span class="chip">Сколько не оплачено и кому?</span>
+<span class="chip">Что покупали у ТД Арсенал в мае?</span>
+<span class="chip">Средняя цена бетона B25 по месяцам</span>
+<span class="chip">Какие позиции без цены?</span>
+<span class="chip">Сравни план и факт по объекту</span>
+</div>
+</div></section>
+
+<section id="comp" style="background:#fff"><div class="wrap">
+<h2>Почему этого больше нигде нет</h2>
+<p class="lead">Прямого аналога — русскоязычного ИИ-аналитика таблиц в Telegram — на рынке нет. А то, что есть, для российской стройки не работает: Microsoft Copilot юрлицам в России недоступен из-за санкций, ChatGPT требует зарубежную карту и отправляет ваш файл в нейросеть целиком, а внедрение 1С или BI-системы — это месяцы и сотни тысяч рублей.</p>
+<div class="tblwrap"><table>
+<thead><tr><th></th><th>🏗 СтройТаблица</th><th>Microsoft Copilot</th><th>ChatGPT</th><th>Внедрение 1С / BI</th></tr></thead>
+<tbody>
+<tr><td>Работает в России без VPN и зарубежных карт</td><td class="ok">Да</td><td class="no">Нет — санкции</td><td class="no">Нет</td><td class="ok">Да</td></tr>
+<tr><td>Понимает вопросы по-русски</td><td class="ok">Да</td><td class="ok">Да</td><td class="ok">Да</td><td class="no">Нет — отчёты настраивают программисты</td></tr>
+<tr><td>Точные расчёты (считает база данных)</td><td class="ok">Да</td><td>Частично</td><td class="no">Нет — может «придумать» цифру</td><td class="ok">Да</td></tr>
+<tr><td>Файл целиком НЕ уходит в нейросеть</td><td class="ok">Да</td><td class="no">Нет</td><td class="no">Нет</td><td class="ok">Да</td></tr>
+<tr><td>Запуск без внедрения и обучения</td><td class="ok">1 минута</td><td>Дни</td><td>Часы</td><td class="no">Месяцы</td></tr>
+<tr><td>Цена</td><td class="ok">от 0 ₽</td><td>~2 800 ₽/чел/мес</td><td>~2 000 ₽/мес</td><td class="no">от 300 000 ₽</td></tr>
+</tbody>
+</table></div>
+</div></section>
+
+<section><div class="wrap">
+<h2>Кому это нужно</h2>
+<p class="lead">Всем в строительной компании, кто живёт в таблицах.</p>
+<div class="grid">
+<div class="card"><div class="ico">📦</div><h3>Снабженец</h3><p>Сравнение прайсов, поиск лучшей цены, контроль заявок и оплат — без ручного перебора сотен строк.</p></div>
+<div class="card"><div class="ico">👷</div><h3>Прораб / ПТО</h3><p>Учёт материалов по объектам, план-факт, перерасход — прямо с объекта, с телефона, без ожидания отчёта из офиса.</p></div>
+<div class="card"><div class="ico">💼</div><h3>Директор</h3><p>Сводка по любому файлу за минуту. Дебиторка, топ затрат, контроль снабженцев — без звонков и совещаний.</p></div>
+<div class="card"><div class="ico">🧮</div><h3>Бухгалтерия</h3><p>Сверка ведомостей, поиск расхождений и дублей перед закрытием месяца — без ночных бдений над ВПР.</p></div>
+</div>
+</div></section>
+
+<section id="plans" style="background:#fff"><div class="wrap">
+<h2>Тарифы</h2>
+<p class="lead">Начните бесплатно — без карты и регистрации. Подключение платного тарифа — напишите нам в Telegram, подключим в течение часа. Оплата по счёту или переводом, онлайн-оплата скоро. <b>При оплате за год — два месяца в подарок.</b></p>
+<div class="plans">
+<div class="plan"><h3>Бесплатный</h3><div class="price">0 ₽</div>
+<ul><li>3 файла в месяц</li><li>15 вопросов на файл</li><li>Файлы до 2 000 строк</li><li>Все виды анализа</li></ul>
+<a class="btn ghost" href="https://t.me/stroytablica_bot">Начать в Telegram</a></div>
+<div class="plan"><h3>Старт</h3><div class="price">990 ₽<span>/мес</span></div>
+<ul><li>30 файлов в месяц</li><li>Вопросы без ограничений</li><li>Файлы до 20 000 строк</li><li>За год: 9 900 ₽ — 2 месяца в подарок</li></ul>
+<a class="btn ghost" href="https://t.me/StableCent">Подключить в Telegram</a></div>
+<div class="plan hot"><h3>Бизнес</h3><div class="price">2 990 ₽<span>/мес</span></div>
+<ul><li>Файлы без лимита</li><li>До 200 000 строк</li><li>Сверка двух файлов</li><li>За год: 29 900 ₽ — 2 месяца в подарок</li></ul>
+<a class="btn" href="https://t.me/StableCent">Подключить в Telegram</a></div>
+<div class="plan"><h3>Команда</h3><div class="price">6 900 ₽<span>/мес</span></div>
+<ul><li>Всё из «Бизнес»</li><li>5 сотрудников</li><li>Приоритетная поддержка</li><li>За год: 69 000 ₽ — 2 месяца в подарок</li></ul>
+<a class="btn ghost" href="https://t.me/StableCent">Подключить в Telegram</a></div>
+</div>
+<div class="implant">
+<div><h3>Внедрение под ключ — для компаний от 20 сотрудников</h3>
+<p>Настроим бота под ваши реальные файлы, обучим снабженцев и ПТО, сопроводим первый месяц. Разовая услуга от 15 000 ₽ — плюс любой тариф.</p></div>
+<a class="btn" href="https://t.me/StableCent">Обсудить внедрение</a>
+</div>
+</div></section>
+
+<section id="partners"><div class="wrap">
+<h2>Партнёрам — 25% с каждого платежа</h2>
+<p class="lead">Бухгалтерские компании, 1С-франчайзи, поставщики стройматериалов: у вас уже есть доступ к снабженцам и директорам строительных компаний. Рекомендуйте им СтройТаблицу — и получайте 25% от всех платежей приведённого клиента в течение первого года. Клиент называет вас при подключении, выплаты — ежемесячно.</p>
+<div class="grid">
+<div class="card"><div class="ico">🧾</div><h3>Бухгалтериям и аутсорсерам</h3><p>Ваши клиенты-строители перестанут приносить таблицы с ошибками — а вы заработаете на рекомендации.</p></div>
+<div class="card"><div class="ico">🖥️</div><h3>1С-франчайзи и интеграторам</h3><p>Простое дополнение к вашим внедрениям: без техподдержки с вашей стороны, мы всё берём на себя.</p></div>
+<div class="card"><div class="ico">🏗️</div><h3>Поставщикам стройматериалов</h3><p>Ваши покупатели-снабженцы получают инструмент, вы — процент и лояльность клиентов.</p></div>
+</div>
+<p style="margin-top:22px"><a class="btn" href="https://t.me/StableCent">Стать партнёром</a></p>
+</div></section>
+
+<section style="background:#fff"><div class="wrap">
+<h2>Частые вопросы</h2>
+<details><summary>Куда попадают мои данные? Это безопасно?</summary><p>Файл загружается в изолированную базу данных на защищённом сервере, доступ к которой есть только у сервиса. В нейросеть таблица целиком не передаётся — только названия колонок и несколько первых строк, чтобы она поняла структуру. Все расчёты выполняет база данных — поэтому цифры точные. Рекомендуем загружать таблицы без персональных данных (ФИО, телефоны сотрудников) — для анализа закупок и план-факта они не нужны.</p></details>
+<details><summary>Какие файлы поддерживаются?</summary><p>.xlsx, .xls, .csv и .ods — Excel любой версии вплоть до 2003, а также МойОфис, Р7-Офис, LibreOffice и выгрузки из 1С. Размер — до 20 МБ.</p></details>
+<details><summary>У меня «кривая» таблица: шапка в две строки, числа с пробелами. Справится?</summary><p>Да. Бот понимает русские форматы чисел («1 234,56»), шапки в две строки, пустые строки, опечатки и разный регистр в названиях. Если чего-то не поймёт — честно скажет, а не придумает ответ.</p></details>
+<details><summary>Нужен ли Microsoft Office или подписка Microsoft 365?</summary><p>Нет. Бот читает сам файл и не встраивается в Excel. Какая у вас версия Офиса и откуда она — не имеет значения.</p></details>
+<details><summary>Сколько это стоит на самом деле? Есть скрытые платежи?</summary><p>Нет. Бесплатный тариф — навсегда бесплатный: 3 файла в месяц, карта не нужна. Платные тарифы — фиксированная цена в месяц, без доплат за вопросы. За год — два месяца в подарок.</p></details>
+<details><summary>Работает ли в Казахстане, Грузии, Беларуси, Армении?</summary><p>Да, везде, где работает Telegram. Для компаний из СНГ действуют те же тарифы — напишите нам, согласуем оплату.</p></details>
+<details><summary>А если мне нужно что-то особенное под мою компанию?</summary><p>Напишите нам — дорабатываем бота под задачи клиентов: свои отчёты, интеграции, обучение сотрудников. Для компаний от 20 человек есть внедрение под ключ.</p></details>
+</div></section>
+
+<div class="wrap"><div class="cta-end">
+<h2>Попробуйте на своём файле прямо сейчас</h2>
+<p>Загрузите таблицу — и через минуту получите первый ответ. Бесплатно, без карты.</p>
+<a class="btn" href="https://t.me/stroytablica_bot">Открыть бота в Telegram</a>
+</div></div>
+
+<footer><div class="wrap">
+<div>© 2026 СтройТаблица · Статьи: <a href="/oshibki-v-smete-excel.html">ошибки в Excel</a> · <a href="/uchet-materialov-excel.html">учёт материалов</a> · <a href="/neyroset-dlya-excel.html">нейросеть для Excel</a></div>
+<div>Подключение и вопросы: <a href="https://t.me/StableCent">Telegram @StableCent</a> · для СНГ: <a href="https://wa.me/37281952565">WhatsApp</a></div>
+</div></footer>
+
+</body>
+</html>
