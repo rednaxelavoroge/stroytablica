@@ -59,6 +59,8 @@ nav .links a{color:var(--mut);text-decoration:none;font-size:.94rem}
 .msg{max-width:88%;padding:9px 13px;border-radius:12px;font-size:.83rem;margin-bottom:9px;color:var(--ink);white-space:pre-line}
 .msg.user{background:#e3f1fd;margin-left:auto;border-bottom-right-radius:4px}
 .msg.bot{background:#f2f3f6;border-bottom-left-radius:4px}
+.video-frame{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:16px;box-shadow:0 18px 50px rgba(0,0,0,.18);border:1px solid var(--line);background:#000}
+.video-frame iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
 section{padding:60px 0}
 section h2{font-size:1.8rem;margin-bottom:8px}
 section p.lead{color:var(--mut);margin-bottom:32px;max-width:720px;font-size:1.02rem}
@@ -94,13 +96,6 @@ thead th:nth-child(2){color:var(--amber-d);font-weight:800}
 .plan ul{list-style:none;margin:16px 0 22px;flex:1}
 .plan li{font-size:.9rem;color:var(--mut);padding:5px 0 5px 24px;position:relative}
 .plan li::before{content:'✓';position:absolute;left:2px;color:var(--amber);font-weight:700}
-.plan li.soon{font-style:italic}
-.plan li.soon::before{content:'•';color:var(--mut)}
-.billing-toggle{display:inline-flex;background:#fff;border:1px solid var(--line);border-radius:999px;padding:4px;margin:6px 0 26px;gap:4px}
-.bt{border:none;background:transparent;padding:9px 18px;border-radius:999px;font-size:.92rem;font-weight:600;color:var(--mut);cursor:pointer;display:flex;align-items:center;gap:6px;font-family:inherit}
-.bt.active{background:var(--amber);color:#fff}
-.bt .save{font-size:.72rem;font-weight:700;background:rgba(0,0,0,.12);padding:2px 7px;border-radius:20px}
-.bt.active .save{background:rgba(255,255,255,.25)}
 details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 20px;margin-bottom:10px}
 summary{font-weight:600;cursor:pointer}
 details p{color:var(--mut);margin-top:10px;font-size:.95rem}
@@ -121,7 +116,7 @@ footer a{color:var(--mut)}
 <nav><div class="wrap">
 <a class="logo" href="#">🏗 СтройТаблица</a>
 <div class="links">
-<a href="#what">Что это</a><a href="#feat">Что умеет</a><a href="#comp">Сравнение</a><a href="#plans">Тарифы</a><a href="#partners">Партнёрам</a>
+<a href="#what">Что это</a><a href="#demo">Демо</a><a href="#feat">Что умеет</a><a href="#comp">Сравнение</a><a href="#plans">Тарифы</a><a href="#partners">Партнёрам</a>
 <a class="btn sm" href="https://t.me/stroytablica_bot">Открыть бота</a>
 </div>
 </div></nav>
@@ -145,6 +140,12 @@ footer a{color:var(--mut)}
 <div class="msg bot">Да, 3 пары полных дублей: строки 25 и 602, 11 и 601, 60 и 603.</div>
 </div>
 </div></header>
+
+<section id="demo"><div class="wrap">
+<h2>Смотрите сами</h2>
+<p class="lead">Загрузка файла и вопросы по-русски — в реальном времени, без монтажа.</p>
+<div class="video-frame"><iframe src="https://www.youtube.com/embed/kqz7XeqbkGw" title="СтройТаблица — демо" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+</div></section>
 
 <section id="what" style="background:#fff"><div class="wrap">
 <h2>Что это такое — простыми словами</h2>
@@ -213,23 +214,19 @@ footer a{color:var(--mut)}
 
 <section id="plans" style="background:#fff"><div class="wrap">
 <h2>Тарифы</h2>
-<p class="lead">Начните бесплатно — без карты и регистрации. Подключение платного тарифа — напишите нам в Telegram, подключим в течение часа. Оплата по счёту или переводом, онлайн-оплата скоро. При оплате за год — два месяца в подарок.</p>
-<div class="billing-toggle" role="tablist" aria-label="Период оплаты">
-<button type="button" class="bt active" data-period="m">Помесячно</button>
-<button type="button" class="bt" data-period="y">За год <span class="save">−2 мес</span></button>
-</div>
+<p class="lead">Начните бесплатно — без карты и регистрации. Подключение платного тарифа — напишите нам в Telegram, подключим в течение часа. Оплата по счёту или переводом, онлайн-оплата скоро. <b>При оплате за год — два месяца в подарок.</b></p>
 <div class="plans">
 <div class="plan"><h3>Бесплатный</h3><div class="price">0 ₽</div>
 <ul><li>3 файла в месяц</li><li>15 вопросов на файл</li><li>Файлы до 2 000 строк</li><li>Все виды анализа</li></ul>
 <a class="btn ghost" href="https://t.me/stroytablica_bot">Начать в Telegram</a></div>
-<div class="plan"><h3>Старт</h3><div class="price" data-m="990" data-y="9900">990 ₽<span>/мес</span></div>
-<ul><li>30 файлов в месяц</li><li>Вопросы без ограничений</li><li>Файлы до 20 000 строк</li></ul>
+<div class="plan"><h3>Старт</h3><div class="price">990 ₽<span>/мес</span></div>
+<ul><li>30 файлов в месяц</li><li>Вопросы без ограничений</li><li>Файлы до 20 000 строк</li><li>За год: 9 900 ₽ — 2 месяца в подарок</li></ul>
 <a class="btn ghost" href="https://t.me/StableCent">Подключить в Telegram</a></div>
-<div class="plan hot"><h3>Бизнес</h3><div class="price" data-m="2990" data-y="29900">2 990 ₽<span>/мес</span></div>
-<ul><li>Файлы без лимита</li><li>До 200 000 строк</li><li>Сверка двух файлов</li><li>Экспорт результатов в Excel</li><li class="soon">КС-2 / КС-3 — скоро</li></ul>
+<div class="plan hot"><h3>Бизнес</h3><div class="price">2 990 ₽<span>/мес</span></div>
+<ul><li>Файлы без лимита</li><li>До 200 000 строк</li><li>Сверка двух файлов</li><li>За год: 29 900 ₽ — 2 месяца в подарок</li></ul>
 <a class="btn" href="https://t.me/StableCent">Подключить в Telegram</a></div>
-<div class="plan"><h3>Команда</h3><div class="price" data-m="6900" data-y="69000">6 900 ₽<span>/мес</span></div>
-<ul><li>Всё из «Бизнес»</li><li>5 сотрудников</li><li>Приоритетная поддержка</li><li class="soon">КС-2 / КС-3 — скоро</li></ul>
+<div class="plan"><h3>Команда</h3><div class="price">6 900 ₽<span>/мес</span></div>
+<ul><li>Всё из «Бизнес»</li><li>5 сотрудников</li><li>Приоритетная поддержка</li><li>За год: 69 000 ₽ — 2 месяца в подарок</li></ul>
 <a class="btn ghost" href="https://t.me/StableCent">Подключить в Telegram</a></div>
 </div>
 <div class="implant">
@@ -269,29 +266,8 @@ footer a{color:var(--mut)}
 
 <footer><div class="wrap">
 <div>© 2026 СтройТаблица · Статьи: <a href="/oshibki-v-smete-excel.html">ошибки в Excel</a> · <a href="/uchet-materialov-excel.html">учёт материалов</a> · <a href="/neyroset-dlya-excel.html">нейросеть для Excel</a></div>
-<div>Подключение и вопросы: <a href="https://t.me/StableCent">Telegram</a> · для СНГ: <a href="https://wa.me/37281952565">WhatsApp</a></div>
+<div>Подключение и вопросы: <a href="https://t.me/StableCent">Telegram @StableCent</a> · для СНГ: <a href="https://wa.me/37281952565">WhatsApp</a></div>
 </div></footer>
-
-<script>
-(function(){
-  var buttons = document.querySelectorAll('.bt');
-  var prices = document.querySelectorAll('.plan .price[data-m]');
-  function fmt(n){ return n.replace(/\B(?=(\d{3})+(?!\d))/g, ' '); }
-  function setPeriod(p){
-    buttons.forEach(function(b){ b.classList.toggle('active', b.dataset.period === p); });
-    prices.forEach(function(el){
-      var val = p === 'y' ? el.dataset.y : el.dataset.m;
-      var suf = p === 'y' ? '/год' : '/мес';
-      el.firstChild.nodeValue = fmt(val) + ' ₽';
-      var span = el.querySelector('span');
-      if (span) span.textContent = suf;
-    });
-  }
-  buttons.forEach(function(b){
-    b.addEventListener('click', function(){ setPeriod(b.dataset.period); });
-  });
-})();
-</script>
 
 </body>
 </html>
