@@ -3,19 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>БудаўнТабліца — ШІ-аналітык Excel-табліц для будаўніцтва. У Telegram</title>
+<title>БудТабліца — ШІ-аналітык Excel-табліц для будаўніцтва. У Telegram</title>
 <meta name="description" content="Дашліце боту табліцу — улік матэрыялаў, план-факт, прайс — і задавайце пытанні звычайным тэкстам. Памылкі, дублі, зводкі — за секунды. Бясплатна да 3 файлаў на месяц, без карткі.">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="БудаўнТабліца">
+<meta property="og:site_name" content="БудТабліца">
 <meta property="og:url" content="https://stroytablica.ru/be/">
-<meta property="og:title" content="БудаўнТабліца — Excel-табліцы адказваюць на пытанні. У Telegram">
+<meta property="og:title" content="БудТабліца — Excel-табліцы адказваюць на пытанні. У Telegram">
 <meta property="og:description" content="Дашліце боту табліцу і пытайце звычайным тэкстам: памылкі ў сумах, дублі, зводкі — за секунды. Бясплатна да 3 файлаў на месяц.">
 <meta property="og:image" content="https://stroytablica.ru/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:locale" content="be_BY">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="БудаўнТабліца — Excel-табліцы адказваюць на пытанні. У Telegram">
+<meta name="twitter:title" content="БудТабліца — Excel-табліцы адказваюць на пытанні. У Telegram">
 <meta name="twitter:description" content="Дашліце боту табліцу і пытайце звычайным тэкстам: памылкі ў сумах, дублі, зводкі — за секунды. Бясплатна да 3 файлаў на месяц.">
 <meta name="twitter:image" content="https://stroytablica.ru/og.png">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8F%97%3C/text%3E%3C/svg%3E">
@@ -29,7 +29,7 @@
 <link rel="alternate" hreflang="tr" href="https://stroytablica.ru/tr/">
 <link rel="alternate" hreflang="x-default" href="https://stroytablica.ru/">
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "БудаўнТабліца", "operatingSystem": "Telegram", "applicationCategory": "BusinessApplication", "description": "ШІ-аналітык Excel для будаўнічых кампаній у Telegram. Дакладныя разлікі праз базу дадзеных.", "url": "https://stroytablica.ru/be/", "offers": [{"@type": "Offer", "name": "Бясплатны", "price": "0", "priceCurrency": "RUB"}, {"@type": "Offer", "name": "Старт", "price": "990", "priceCurrency": "RUB"}, {"@type": "Offer", "name": "Бізнес", "price": "2990", "priceCurrency": "RUB"}, {"@type": "Offer", "name": "Каманда", "price": "6900", "priceCurrency": "RUB"}]}
+{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "БудТабліца", "operatingSystem": "Telegram", "applicationCategory": "BusinessApplication", "description": "ШІ-аналітык Excel для будаўнічых кампаній у Telegram. Дакладныя разлікі праз базу дадзеных.", "url": "https://stroytablica.ru/be/", "offers": [{"@type": "Offer", "name": "Бясплатны", "price": "0", "priceCurrency": "RUB"}, {"@type": "Offer", "name": "Старт", "price": "990", "priceCurrency": "RUB"}, {"@type": "Offer", "name": "Бізнес", "price": "2990", "priceCurrency": "RUB"}, {"@type": "Offer", "name": "Каманда", "price": "6900", "priceCurrency": "RUB"}]}
 </script>
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Бяспека?", "acceptedAnswer": {"@type": "Answer", "text": "Файл у ізаляванай БД. У нейрасетку цалкам не ідзе."}}, {"@type": "Question", "name": "Файлы?", "acceptedAnswer": {"@type": "Answer", "text": "xlsx, xls, csv, ods да 20 МБ."}}, {"@type": "Question", "name": "Office?", "acceptedAnswer": {"@type": "Answer", "text": "Не патрэбны."}}, {"@type": "Question", "name": "Цана?", "acceptedAnswer": {"@type": "Answer", "text": "3 файлы/мес бясплатна. Платныя ад 990 ₽."}}, {"@type": "Question", "name": "Краіны?", "acceptedAnswer": {"@type": "Answer", "text": "Усюды, дзе Telegram."}}]}
@@ -57,7 +57,7 @@ nav .links a{color:var(--mut);text-decoration:none;font-size:.88rem;white-space:
 .lang-menu a.active{background:#101623;color:#fff}
 .lang-menu a span{color:var(--mut);font-size:.75rem;font-weight:700}
 .lang-menu a.active span{color:#c6cede}
-.btn{display:inline-block;background:var(--amber);color:#fff;font-weight:700;padding:13px 28px;border-radius:10px;text-decoration:none;transition:.15s;white-space:nowrap}
+.btn{display:inline-block;background:var(--amber);color:#fff;font-weight:700;padding:13px 28px;border-radius:10px;text-decoration:none;transition:.15s;white-space:nowrap;text-align:center;white-space:normal;line-height:1.25;max-width:100%}
 .btn:hover{background:var(--amber-d)}
 .btn.sm{padding:8px 14px;font-size:.88rem}
 .btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
@@ -128,12 +128,22 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 footer a{color:var(--mut)}
 @media(max-width:1100px){nav .links>.nav-hide{display:none}}
 @media(max-width:820px){.hero .wrap{grid-template-columns:1fr}.hero h1{font-size:1.7rem}.chat{margin:0 auto}.logo{font-size:.95rem;max-width:48vw}}
+
+.btn{text-align:center;white-space:normal;line-height:1.25;max-width:100%}
+.btn.sm{padding:8px 12px;font-size:.85rem}
+.plan .btn,.plan a.btn{width:100%;box-sizing:border-box;padding:11px 12px;font-size:.88rem;margin-top:auto}
+.plan .price{font-size:1.65rem;word-break:break-word}
+.plan .price span{display:inline}
+.plan .usd{display:block;font-size:.75rem;font-weight:500;color:var(--mut);margin-top:2px}
+.logo{font-size:1rem;max-width:min(200px,38vw)}
+.nav-right .btn.sm{flex-shrink:0}
+
 </style>
 </head>
 <body>
 
 <nav><div class="wrap">
-<a class="logo" href="/be/">🏗 БудаўнТабліца</a>
+<a class="logo" href="/be/">🏗 БудТабліца</a>
 <div class="nav-right">
 <div class="links">
 <span class="nav-hide"><a href="#what">Што гэта</a></span>
@@ -144,7 +154,7 @@ footer a{color:var(--mut)}
 <span class="nav-hide"><a href="#partners">Партнёрам</a></span>
 </div>
 <details class="lang-dd"><summary aria-label="Language">BE</summary><div class="lang-menu"><a href="/" hreflang="ru">Русский<span>RU</span></a><a href="/uk/" hreflang="uk">Українська<span>UK</span></a><a href="/be/" hreflang="be" class="active">Беларуская<span>BE</span></a><a href="/kk/" hreflang="kk">Қазақша<span>KK</span></a><a href="/ka/" hreflang="ka">ქართული<span>KA</span></a><a href="/hy/" hreflang="hy">Հայերեն<span>HY</span></a><a href="/tr/" hreflang="tr">Türkçe<span>TR</span></a></div></details>
-<a class="btn sm" href="https://t.me/stroytablica_bot?start=lang_be">Адкрыць бота</a>
+<a class="btn sm" href="https://t.me/stroytablica_bot?start=lang_be">Бот</a>
 </div>
 </div></nav>
 
@@ -152,11 +162,11 @@ footer a{color:var(--mut)}
 <div>
 <h1>Вашы Excel-табліцы <em>адказваюць на пытанні</em>. У Telegram.</h1>
 <p class="sub">Дашліце боту ўлік матэрыялаў, план-факт ці прайс — і пытайце звычайным тэкстам, як калегу. Памылкі ў сумах, дублі, зводкі па пастаўшчыках — за секунды.</p>
-<a class="btn" href="https://t.me/stroytablica_bot?start=lang_be">Паспрабаваць бясплатна</a>
+<a class="btn" href="https://t.me/stroytablica_bot?start=lang_be">Паспрабаваць</a>
 <p class="note">3 файлы на месяц бясплатна · без карткі · без усталёўкі · без навучання</p>
 </div>
 <div class="chat">
-<div class="head"><div class="ava">🏗</div><div><b>БудаўнТабліца</b><span>бот</span></div></div>
+<div class="head"><div class="ava">🏗</div><div><b>БудТабліца</b><span>бот</span></div></div>
 <div class="msg user">📎 Materials_Lugovaya12.xlsx</div>
 <div class="msg bot">✅ 603 радкі, 11 калонак. Задавайце пытанні!</div>
 <div class="msg user">Знайдзі радкі, дзе сума не сыходзіцца з кольк × цана</div>
@@ -171,12 +181,12 @@ footer a{color:var(--mut)}
 <section id="demo"><div class="wrap">
 <h2>Глядзіце самі</h2>
 <p class="lead">Загрузка файла і пытанні звычайным тэкстам — у рэальным часе, без мантажу.</p>
-<div class="video-frame"><iframe src="https://www.youtube.com/embed/kqz7XeqbkGw" title="БудаўнТабліца — дэма" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+<div class="video-frame"><iframe src="https://www.youtube.com/embed/kqz7XeqbkGw" title="БудТабліца — дэма" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
 </div></section>
 
 <section id="what" style="background:#fff"><div class="wrap">
 <h2>Што гэта — простымі словамі</h2>
-<p class="lead">БудаўнТабліца — гэта бот у Telegram, якому вы дасылаеце свой звычайны Excel-файл. Далей пішаце пытанне словамі: «колькі патрацілі на бетон у маі?» — і праз некалькі секунд атрымліваеце дакладны адказ з лічбамі і нумарамі радкоў. Не трэба ведаць формулы і зводныя табліцы.</p>
+<p class="lead">БудТабліца — гэта бот у Telegram, якому вы дасылаеце свой звычайны Excel-файл. Далей пішаце пытанне словамі: «колькі патрацілі на бетон у маі?» — і праз некалькі секунд атрымліваеце дакладны адказ з лічбамі і нумарамі радкоў. Не трэба ведаць формулы і зводныя табліцы.</p>
 <div class="steps">
 <div class="step"><h3>Ваш файл</h3><p>Любая табліца: улік матэрыялаў, ведамасці, прайсы, план-факт. Як ёсць, без падрыхтоўкі.</p></div>
 <div class="step"><h3>Ваша пытанне</h3><p>Звычайнымі словамі, як калегу. З тэлефона, проста з аб'екта.</p></div>
@@ -205,7 +215,7 @@ footer a{color:var(--mut)}
 <h2>Чаму гэтага больш нідзе няма</h2>
 <p class="lead">Прамога аналага — ШІ-аналітыка табліц у Telegram — на рынку няма. Copilot часта недаступны, ChatGPT патрабуе замежную картку і дасылае файл у нейрасетку цалкам, а ўкараненне 1С/BI — месяцы і вялікія бюджэты.</p>
 <div class="tblwrap"><table>
-<thead><tr><th></th><th>🏗 БудаўнТабліца</th><th>Microsoft Copilot</th><th>ChatGPT</th><th>Укараненне 1С / BI</th></tr></thead>
+<thead><tr><th></th><th>🏗 БудТабліца</th><th>Microsoft Copilot</th><th>ChatGPT</th><th>Укараненне 1С / Bitrix / BI</th></tr></thead>
 <tbody>
 <tr><td>Даступны напрамую, замежная картка не патрэбна</td><td class="ok">Так</td><td class="no">Не — абмежаванні</td><td class="no">Не</td><td class="ok">Так</td></tr>
 <tr><td>Разумее пытанні звычайным тэкстам</td><td class="ok">Так</td><td class="ok">Так</td><td class="ok">Так</td><td class="no">Не — справаздачы наладжваюць праграмісты</td></tr>
@@ -232,35 +242,35 @@ footer a{color:var(--mut)}
 <h2>Тарыфы</h2>
 <p class="lead">Пачніце бясплатна — без карткі і рэгістрацыі. Платы тарыф — напішыце ў Telegram, падключым на працягу гадзіны. <b>За год — два месяцы ў падарунак.</b></p>
 <div class="plans">
-<div class="plan"><h3>Бясплатны</h3><div class="price">0 ₽</div>
+<div class="plan"><h3>Бясплатны</h3><div class="price">0 Br</div>
 <ul><li>3 файлы на месяц</li><li>15 пытанняў на файл</li><li>Файлы да 2 000 радкоў</li><li>Усе віды аналізу</li></ul>
-<a class="btn ghost" href="https://t.me/stroytablica_bot?start=lang_be">Пачаць у Telegram</a></div>
-<div class="plan"><h3>Старт</h3><div class="price">990 ₽<span>/мес</span></div>
-<ul><li>30 файлаў на месяц</li><li>Пытанні без абмежаванняў</li><li>Файлы да 20 000 радкоў</li><li>За год: 9 900 ₽ — 2 месяцы ў падарунак</li></ul>
-<a class="btn ghost" href="https://t.me/StableCent">Падключыць у Telegram</a></div>
-<div class="plan hot" data-badge="Папулярны"><h3>Бізнес</h3><div class="price">2 990 ₽<span>/мес</span></div>
-<ul><li>Файлы без ліміту</li><li>Да 200 000 радкоў</li><li>Зверка двух файлаў</li><li class="soon">КС-2 / КС-3 — хутка</li><li>За год: 29 900 ₽ — 2 месяцы ў падарунак</li></ul>
-<a class="btn" href="https://t.me/StableCent">Падключыць у Telegram</a></div>
-<div class="plan"><h3>Каманда</h3><div class="price">6 900 ₽<span>/мес</span></div>
-<ul><li>Усё з «Бізнес»</li><li>5 супрацоўнікаў</li><li>Прыярытэтная падтрымка</li><li class="soon">КС-2 / КС-3 — хутка</li><li>За год: 69 000 ₽ — 2 месяцы ў падарунак</li></ul>
-<a class="btn ghost" href="https://t.me/StableCent">Падключыць у Telegram</a></div>
+<a class="btn ghost" href="https://t.me/stroytablica_bot?start=lang_be">У Telegram</a></div>
+<div class="plan"><h3>Старт</h3><div class="price">36 Br<span>/мес</span><span class="usd">~$11</span></div>
+<ul><li>30 файлаў на месяц</li><li>Пытанні без абмежаванняў</li><li>Файлы да 20 000 радкоў</li><li>За год: 360 Br — 2 месяцы ў падарунак (~$110)</li></ul>
+<a class="btn ghost" href="https://t.me/StableCent">Падключыць</a></div>
+<div class="plan hot" data-badge="Папулярны"><h3>Бізнес</h3><div class="price">110 Br<span>/мес</span><span class="usd">~$33</span></div>
+<ul><li>Файлы без ліміту</li><li>Да 200 000 радкоў</li><li>Зверка двух файлаў</li><li class="soon">КС-2 / КС-3 — хутка</li><li>За год: 1 100 Br — 2 месяцы (~$330)</li></ul>
+<a class="btn" href="https://t.me/StableCent">Падключыць</a></div>
+<div class="plan"><h3>Каманда</h3><div class="price">250 Br<span>/мес</span><span class="usd">~$77</span></div>
+<ul><li>Усё з «Бізнес»</li><li>5 супрацоўнікаў</li><li>Прыярытэтная падтрымка</li><li class="soon">КС-2 / КС-3 — хутка</li><li>За год: 2 500 Br — 2 месяцы (~$770)</li></ul>
+<a class="btn ghost" href="https://t.me/StableCent">Падключыць</a></div>
 </div>
 <div class="implant">
 <div><h3>Укараненне пад ключ — для кампаній ад 20 супрацоўнікаў</h3>
 <p>Наладзім бота пад вашы файлы, навучым снабжэнцаў і ПТО, суправадзім першы месяц. Ад 15 000 ₽ + любы тарыф.</p></div>
-<a class="btn" href="https://t.me/StableCent">Абмеркаваць укараненне</a>
+<a class="btn" href="https://t.me/StableCent">Абмеркаваць</a>
 </div>
 </div></section>
 
 <section id="partners"><div class="wrap">
 <h2>Партнёрам — 25% з кожнага платежу</h2>
-<p class="lead">Бухгалтарскія кампаніі, 1С-франчайзі, пастаўшчыкі будматэрыялаў: раіце БудаўнТабліца і атрымлівайце 25% ад плацяжоў прыведзенага кліента на працягу першага года.</p>
+<p class="lead">Бухгалтарскія кампаніі, 1С-франчайзі, пастаўшчыкі будматэрыялаў: раіце БудТабліца і атрымлівайце 25% ад плацяжоў прыведзенага кліента на працягу першага года.</p>
 <div class="grid">
 <div class="card"><div class="ico">🧾</div><h3>Бухгалтэрыям</h3><p>Кліенты-будаўнікі перастануць прыносіць табліцы з памылкамі — вы зарабіце на рэкамендацыі.</p></div>
 <div class="card"><div class="ico">🖥️</div><h3>1С-франчайзі</h3><p>Простае дапаўненне да ўкараненняў: тэхпадтрымку бярэм на сябе.</p></div>
 <div class="card"><div class="ico">🏗️</div><h3>Пастаўшчыкам будматэрыялаў</h3><p>Вашы пакупнікі атрымліваюць інструмент, вы — працэнт і лаяльнасць.</p></div>
 </div>
-<p style="margin-top:22px"><a class="btn" href="https://t.me/StableCent">Стаць партнёрам</a></p>
+<p style="margin-top:22px"><a class="btn" href="https://t.me/StableCent">Партнёрства</a></p>
 </div></section>
 
 <section style="background:#fff"><div class="wrap">
@@ -271,11 +281,11 @@ footer a{color:var(--mut)}
 <div class="wrap"><div class="cta-end">
 <h2>Паспрабуйце на сваім файле зараз</h2>
 <p>Загрузіце табліцу — і праз хвіліну атрымаеце першы адказ. Бясплатна, без карткі.</p>
-<a class="btn" href="https://t.me/stroytablica_bot?start=lang_be">Адкрыць бота ў Telegram</a>
+<a class="btn" href="https://t.me/stroytablica_bot?start=lang_be">Адкрыць бота</a>
 </div></div>
 
 <footer><div class="wrap">
-<div>© 2026 БудаўнТабліца · Артыкулы: <a href="/oshibki-v-smete-excel.html">памылкі ў Excel</a> · <a href="/uchet-materialov-excel.html">улік матэрыялаў</a> · <a href="/neyroset-dlya-excel.html">нейрасетка для Excel</a></div>
+<div>© 2026 БудТабліца · Артыкулы: <a href="/oshibki-v-smete-excel.html">памылкі ў Excel</a> · <a href="/uchet-materialov-excel.html">улік матэрыялаў</a> · <a href="/neyroset-dlya-excel.html">нейрасетка для Excel</a></div>
 <div>Дакументы: <a href="/privacy.html">Палітыка канфідэнцыяльнасці</a> · <a href="/terms.html">Карыстальніцкае пагадненне</a></div>
 <div>Падключэнне і пытанні: <a href="https://t.me/StableCent">Telegram</a> · <a href="mailto:info@stroytablica.ru">info@stroytablica.ru</a> · для СНД: <a href="https://wa.me/37281952565">WhatsApp</a></div>
 </div></footer>
