@@ -4,6 +4,7 @@
 - RU: `https://t.me/stroytablica_bot?start=lang_ru`
 - KA: `https://t.me/stroytablica_bot?start=lang_ka`
 - HY: `https://t.me/stroytablica_bot?start=lang_hy`
+- TR: `https://t.me/stroytablica_bot?start=lang_tr`
 
 Код бота: Supabase edge function `tg-webhook` (проект `vntklcxszqqwbtcergrl`).  
 Перед правкой: скачать текущий код через Supabase MCP / dashboard → не переписывать с нуля.
@@ -13,17 +14,17 @@
 ```sql
 alter table app.users
   add column if not exists ui_lang text not null default 'ru'
-  check (ui_lang in ('ru','ka','hy'));
+  check (ui_lang in ('ru','ka','hy','tr'));
 ```
 
 ## 2. Определение языка
 
 Порядок приоритета:
 
-1. Deep-link `/start lang_ka|lang_hy|lang_ru` (и короткие `ka|hy|ru`) → сохранить в `users.ui_lang`.
-2. Команда `/lang` (кнопки RU / ქარ / Հայ) → обновить `ui_lang`.
+1. Deep-link `/start lang_ka|lang_hy|lang_tr|lang_ru` (и короткие `ka|hy|tr|ru`) → сохранить в `users.ui_lang`.
+2. Команда `/lang` (кнопки RU / ქარ / Հայ / TR) → обновить `ui_lang`.
 3. Если `ui_lang` ещё default и пришёл текст на другом языке — **отвечать на языке сообщения** (system prompt).
-4. Telegram `from.language_code`: `ka`→ka, `hy`→hy, иначе `ru` (только при создании пользователя, не перезаписывать).
+4. Telegram `from.language_code`: `ka`→ka, `hy`→hy, `tr`→tr, иначе `ru` (только при создании пользователя, не перезаписывать).
 
 Реферальный `/start КОД` не трогать: если payload не `lang_*` / `ka|hy|ru` — это referral_code как сейчас.
 
@@ -66,6 +67,21 @@ alter table app.users
 Язык: /lang
 ```
 
+
+### TR
+
+```
+СтройТаблица — İnşaat için Excel AI analisti.
+
+Tablo gönderin (.xlsx / .xls / .csv / .ods) ve soruları düz metinle sorun:
+• toplamın tutmadığı yerler
+• kopya var mı
+• tedarikçi özeti
+
+Ayda 3 dosya ücretsiz. /tariffs · /demo · /support
+Dil: /lang
+```
+
 ### KA
 
 ```
@@ -102,6 +118,7 @@ alter table app.users
 Respond in the same language as the user's question.
 If the question is in Georgian, answer in Georgian.
 If in Armenian, answer in Armenian.
+If in Turkish, answer in Turkish.
 If in Russian, answer in Russian.
 Keep numbers, row IDs, and column names exactly as in the data.
 UI language preference of the user: {ui_lang}.
@@ -122,7 +139,8 @@ UI language preference of the user: {ui_lang}.
 ## 7. Критерии приёмки
 
 1. С лендинга `/ka/` кнопка «ბოტის გახსნა» → `/start lang_ka` → welcome на грузинском.  
-2. С `/hy/` → welcome на армянском.  
+2. С `/hy/` → welcome на армянском.
+2b. С `/tr/` → welcome на турецком.  
 3. Вопрос на грузинском по загруженному файлу → ответ на грузинском.  
 4. В welcome и help нет фразы «по-русски» / «только на русском».  
 5. Реферальный `/start PARTNERCODE` по-прежнему работает.

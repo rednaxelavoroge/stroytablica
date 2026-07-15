@@ -5,6 +5,7 @@
   <xhtml:link rel="alternate" hreflang="ru" href="https://stroytablica.ru/"/>
   <xhtml:link rel="alternate" hreflang="ka" href="https://stroytablica.ru/ka/"/>
   <xhtml:link rel="alternate" hreflang="hy" href="https://stroytablica.ru/hy/"/>
+  <xhtml:link rel="alternate" hreflang="tr" href="https://stroytablica.ru/tr/"/>
   <xhtml:link rel="alternate" hreflang="x-default" href="https://stroytablica.ru/"/>
   <changefreq>weekly</changefreq><priority>1.0</priority>
 </url>
@@ -13,6 +14,7 @@
   <xhtml:link rel="alternate" hreflang="ru" href="https://stroytablica.ru/"/>
   <xhtml:link rel="alternate" hreflang="ka" href="https://stroytablica.ru/ka/"/>
   <xhtml:link rel="alternate" hreflang="hy" href="https://stroytablica.ru/hy/"/>
+  <xhtml:link rel="alternate" hreflang="tr" href="https://stroytablica.ru/tr/"/>
   <changefreq>weekly</changefreq><priority>0.95</priority>
 </url>
 <url>
@@ -20,6 +22,15 @@
   <xhtml:link rel="alternate" hreflang="ru" href="https://stroytablica.ru/"/>
   <xhtml:link rel="alternate" hreflang="ka" href="https://stroytablica.ru/ka/"/>
   <xhtml:link rel="alternate" hreflang="hy" href="https://stroytablica.ru/hy/"/>
+  <xhtml:link rel="alternate" hreflang="tr" href="https://stroytablica.ru/tr/"/>
+  <changefreq>weekly</changefreq><priority>0.95</priority>
+</url>
+<url>
+  <loc>https://stroytablica.ru/tr/</loc>
+  <xhtml:link rel="alternate" hreflang="ru" href="https://stroytablica.ru/"/>
+  <xhtml:link rel="alternate" hreflang="ka" href="https://stroytablica.ru/ka/"/>
+  <xhtml:link rel="alternate" hreflang="hy" href="https://stroytablica.ru/hy/"/>
+  <xhtml:link rel="alternate" hreflang="tr" href="https://stroytablica.ru/tr/"/>
   <changefreq>weekly</changefreq><priority>0.95</priority>
 </url>
 <url><loc>https://stroytablica.ru/oshibki-v-smete-excel.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
