@@ -138,6 +138,14 @@ footer a{color:var(--mut)}
 .logo{font-size:1rem;max-width:min(200px,38vw)}
 .nav-right .btn.sm{flex-shrink:0}
 
+
+.plans{grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+.plan{min-width:0;overflow:hidden}
+.plan a.btn,.plan .btn{width:100%!important;max-width:100%!important;display:block!important;box-sizing:border-box!important;padding:10px 8px!important;font-size:.8rem!important;font-weight:700;line-height:1.2!important;white-space:normal!important;word-break:break-word!important;text-align:center!important;overflow-wrap:anywhere}
+.btn{white-space:normal;text-align:center;line-height:1.25;max-width:100%}
+.btn.sm{padding:8px 10px;font-size:.8rem}
+.plan .price{font-size:1.45rem}
+
 </style>
 </head>
 <body>
@@ -222,7 +230,7 @@ footer a{color:var(--mut)}
 <tr><td>ზუსტი გამოთვლები (ითვლის მონაცემთა ბაზა)</td><td class="ok">დიახ</td><td>ნაწილობრივ</td><td class="no">არა — შეიძლება «მოიფიქროს» ციფრი</td><td class="ok">დიახ</td></tr>
 <tr><td>ფაილი მთლიანად არ მიდის ნეიროქსელში</td><td class="ok">დიახ</td><td class="no">არა</td><td class="no">არა</td><td class="ok">დიახ</td></tr>
 <tr><td>გაშვება დანერგვისა და სწავლების გარეშე</td><td class="ok">1 წუთი</td><td>დღეები</td><td>საათები</td><td class="no">თვეები</td></tr>
-<tr><td>ფასი</td><td class="ok">0 ₽-დან</td><td>~2 800 ₽/ად/თვ</td><td>~2 000 ₽/თვ</td><td class="no">300 000 ₽-დან</td></tr>
+<tr><td>ფასი</td><td class="ok">0 ₾-დან-დან</td><td>~2 800 ₽/ად/თვ</td><td>~2 000 ₽/თვ</td><td class="no">300 000 ₽-დან</td></tr>
 </tbody>
 </table></div>
 </div></section>
@@ -242,22 +250,22 @@ footer a{color:var(--mut)}
 <h2>ტარიფები</h2>
 <p class="lead">დაიწყეთ უფასოდ — ბარათისა და რეგისტრაციის გარეშე. ფასიანი ტარიფი — მოგვწერეთ Telegram-ში, ერთ საათში ჩავრთავთ. <b>წლიური გადახდისას — ორი თვე საჩუქრად.</b></p>
 <div class="plans">
-<div class="plan"><h3>უფასო</h3><div class="price">0 ₽</div>
+<div class="plan"><h3>უფასო</h3><div class="price">0 ₾</div>
 <ul><li>3 ფაილი თვეში</li><li>15 კითხვა ფაილზე</li><li>ფაილები 2 000 სტრიქონამდე</li><li>ანალიზის ყველა სახეობა</li></ul>
 <a class="btn ghost" href="https://t.me/stroytablica_bot?start=lang_ka">Telegram</a></div>
-<div class="plan"><h3>სტარტი</h3><div class="price">990 ₽<span>/თვ</span></div>
-<ul><li>30 ფაილი თვეში</li><li>კითხვები შეუზღუდავად</li><li>ფაილები 20 000 სტრიქონამდე</li><li>წელიწადში: 9 900 ₽ — 2 თვე საჩუქრად</li></ul>
+<div class="plan"><h3>სტარტი</h3><div class="price">34 ₾<span>/თვ</span></div>
+<ul><li>30 ფაილი თვეში</li><li>კითხვები შეუზღუდავად</li><li>ფაილები 20 000 სტრიქონამდე</li><li>წელიწადში: 336 ₾ — 2 თვე საჩუქრად</li></ul>
 <a class="btn ghost" href="https://t.me/StableCent">ჩართვა</a></div>
-<div class="plan hot" data-badge="პოპულარული"><h3>ბიზნესი</h3><div class="price">2 990 ₽<span>/თვ</span></div>
-<ul><li>ფაილები ლიმიტის გარეშე</li><li>200 000 სტრიქონამდე</li><li>ორი ფაილის შეჯერება</li><li class="soon">КС-2 / КС-3 — მალე</li><li>წელიწადში: 29 900 ₽ — 2 თვე საჩუქრად</li></ul>
+<div class="plan hot" data-badge="პოპულარული"><h3>ბიზნესი</h3><div class="price">102 ₾<span>/თვ</span></div>
+<ul><li>ფაილები ლიმიტის გარეშე</li><li>200 000 სტრიქონამდე</li><li>ორი ფაილის შეჯერება</li><li class="soon">КС-2 / КС-3 — მალე</li><li>წელიწადში: 1 016 ₾ — 2 თვე საჩუქრად</li></ul>
 <a class="btn" href="https://t.me/StableCent">ჩართვა</a></div>
-<div class="plan"><h3>გუნდი</h3><div class="price">6 900 ₽<span>/თვ</span></div>
-<ul><li>ყველაფერი «ბიზნესიდან»</li><li>5 თანამშრომელი</li><li>პრიორიტეტული მხარდაჭერა</li><li class="soon">КС-2 / КС-3 — მალე</li><li>წელიწადში: 69 000 ₽ — 2 თვე საჩუქრად</li></ul>
+<div class="plan"><h3>გუნდი</h3><div class="price">234 ₾<span>/თვ</span></div>
+<ul><li>ყველაფერი «ბიზნესიდან»</li><li>5 თანამშრომელი</li><li>პრიორიტეტული მხარდაჭერა</li><li class="soon">КС-2 / КС-3 — მალე</li><li>წელიწადში: 2 344 ₾ — 2 თვე საჩუქრად</li></ul>
 <a class="btn ghost" href="https://t.me/StableCent">ჩართვა</a></div>
 </div>
 <div class="implant">
 <div><h3>გასაღებზე დანერგვა — 20+ თანამშრომლის კომპანიებისთვის</h3>
-<p>მოვარგებთ ბოტს თქვენს ფაილებს, ვასწავლით მომარაგებას და ПТО-ს, გაგიყვებით პირველ თვეს. от 15 000 ₽</p></div>
+<p>მოვარგებთ ბოტს თქვენს ფაილებს, ვასწავლით მომარაგებას და ПТО-ს, გაგიყვებით პირველ თვეს.1 698 ₾-დან</p></div>
 <a class="btn" href="https://t.me/StableCent">განხილვა</a>
 </div>
 </div></section>
@@ -270,7 +278,7 @@ footer a{color:var(--mut)}
 <div class="card"><div class="ico">🖥️</div><h3>1С-ფრანჩაიზს</h3><p>მარტივი დამატება დანერგვებზე: ტექმხარდაჭერას ჩვენ ვიღებთ.</p></div>
 <div class="card"><div class="ico">🏗️</div><h3>სამშენებლო მასალების მომწოდებლებს</h3><p>მყიდველები იღებენ ინსტრუმენტს, თქვენ — პროცენტს და ლოიალობას.</p></div>
 </div>
-<p style="margin-top:22px"><a class="btn" href="https://t.me/StableCent">პარტნიორობა</a></p>
+<p style="margin-top:22px"><a class="btn" href="https://t.me/StableCent">პარტნიორი</a></p>
 </div></section>
 
 <section style="background:#fff"><div class="wrap">
@@ -281,7 +289,7 @@ footer a{color:var(--mut)}
 <div class="wrap"><div class="cta-end">
 <h2>სცადეთ საკუთარ ფაილზე ახლავე</h2>
 <p>ატვირთეთ ცხრილი — და ერთ წუთში მიიღებთ პირველ პასუხს. უფასოდ, ბარათის გარეშე.</p>
-<a class="btn" href="https://t.me/stroytablica_bot?start=lang_ka">ბოტი</a>
+<a class="btn" href="https://t.me/stroytablica_bot?start=lang_ka">გახსნა</a>
 </div></div>
 
 <footer><div class="wrap">
