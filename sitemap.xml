@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>https://stroytablica.ru/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<url>
+  <loc>https://stroytablica.ru/</loc>
+  <xhtml:link rel="alternate" hreflang="ru" href="https://stroytablica.ru/"/>
+  <xhtml:link rel="alternate" hreflang="ka" href="https://stroytablica.ru/ka/"/>
+  <xhtml:link rel="alternate" hreflang="hy" href="https://stroytablica.ru/hy/"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://stroytablica.ru/"/>
+  <changefreq>weekly</changefreq><priority>1.0</priority>
+</url>
+<url>
+  <loc>https://stroytablica.ru/ka/</loc>
+  <xhtml:link rel="alternate" hreflang="ru" href="https://stroytablica.ru/"/>
+  <xhtml:link rel="alternate" hreflang="ka" href="https://stroytablica.ru/ka/"/>
+  <xhtml:link rel="alternate" hreflang="hy" href="https://stroytablica.ru/hy/"/>
+  <changefreq>weekly</changefreq><priority>0.95</priority>
+</url>
+<url>
+  <loc>https://stroytablica.ru/hy/</loc>
+  <xhtml:link rel="alternate" hreflang="ru" href="https://stroytablica.ru/"/>
+  <xhtml:link rel="alternate" hreflang="ka" href="https://stroytablica.ru/ka/"/>
+  <xhtml:link rel="alternate" hreflang="hy" href="https://stroytablica.ru/hy/"/>
+  <changefreq>weekly</changefreq><priority>0.95</priority>
+</url>
 <url><loc>https://stroytablica.ru/oshibki-v-smete-excel.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 <url><loc>https://stroytablica.ru/uchet-materialov-excel.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 <url><loc>https://stroytablica.ru/neyroset-dlya-excel.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
