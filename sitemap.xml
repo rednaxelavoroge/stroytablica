@@ -3,6 +3,9 @@
 <url>
   <loc>https://stroytablica.ru/</loc>
   <xhtml:link rel="alternate" hreflang="ru" href="https://stroytablica.ru/"/>
+  <xhtml:link rel="alternate" hreflang="uk" href="https://stroytablica.ru/uk/"/>
+  <xhtml:link rel="alternate" hreflang="be" href="https://stroytablica.ru/be/"/>
+  <xhtml:link rel="alternate" hreflang="kk" href="https://stroytablica.ru/kk/"/>
   <xhtml:link rel="alternate" hreflang="ka" href="https://stroytablica.ru/ka/"/>
   <xhtml:link rel="alternate" hreflang="hy" href="https://stroytablica.ru/hy/"/>
   <xhtml:link rel="alternate" hreflang="tr" href="https://stroytablica.ru/tr/"/>
@@ -10,27 +13,75 @@
   <changefreq>weekly</changefreq><priority>1.0</priority>
 </url>
 <url>
-  <loc>https://stroytablica.ru/ka/</loc>
+  <loc>https://stroytablica.ru/uk/</loc>
   <xhtml:link rel="alternate" hreflang="ru" href="https://stroytablica.ru/"/>
+  <xhtml:link rel="alternate" hreflang="uk" href="https://stroytablica.ru/uk/"/>
+  <xhtml:link rel="alternate" hreflang="be" href="https://stroytablica.ru/be/"/>
+  <xhtml:link rel="alternate" hreflang="kk" href="https://stroytablica.ru/kk/"/>
   <xhtml:link rel="alternate" hreflang="ka" href="https://stroytablica.ru/ka/"/>
   <xhtml:link rel="alternate" hreflang="hy" href="https://stroytablica.ru/hy/"/>
   <xhtml:link rel="alternate" hreflang="tr" href="https://stroytablica.ru/tr/"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://stroytablica.ru/"/>
+  <changefreq>weekly</changefreq><priority>0.95</priority>
+</url>
+<url>
+  <loc>https://stroytablica.ru/be/</loc>
+  <xhtml:link rel="alternate" hreflang="ru" href="https://stroytablica.ru/"/>
+  <xhtml:link rel="alternate" hreflang="uk" href="https://stroytablica.ru/uk/"/>
+  <xhtml:link rel="alternate" hreflang="be" href="https://stroytablica.ru/be/"/>
+  <xhtml:link rel="alternate" hreflang="kk" href="https://stroytablica.ru/kk/"/>
+  <xhtml:link rel="alternate" hreflang="ka" href="https://stroytablica.ru/ka/"/>
+  <xhtml:link rel="alternate" hreflang="hy" href="https://stroytablica.ru/hy/"/>
+  <xhtml:link rel="alternate" hreflang="tr" href="https://stroytablica.ru/tr/"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://stroytablica.ru/"/>
+  <changefreq>weekly</changefreq><priority>0.95</priority>
+</url>
+<url>
+  <loc>https://stroytablica.ru/kk/</loc>
+  <xhtml:link rel="alternate" hreflang="ru" href="https://stroytablica.ru/"/>
+  <xhtml:link rel="alternate" hreflang="uk" href="https://stroytablica.ru/uk/"/>
+  <xhtml:link rel="alternate" hreflang="be" href="https://stroytablica.ru/be/"/>
+  <xhtml:link rel="alternate" hreflang="kk" href="https://stroytablica.ru/kk/"/>
+  <xhtml:link rel="alternate" hreflang="ka" href="https://stroytablica.ru/ka/"/>
+  <xhtml:link rel="alternate" hreflang="hy" href="https://stroytablica.ru/hy/"/>
+  <xhtml:link rel="alternate" hreflang="tr" href="https://stroytablica.ru/tr/"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://stroytablica.ru/"/>
+  <changefreq>weekly</changefreq><priority>0.95</priority>
+</url>
+<url>
+  <loc>https://stroytablica.ru/ka/</loc>
+  <xhtml:link rel="alternate" hreflang="ru" href="https://stroytablica.ru/"/>
+  <xhtml:link rel="alternate" hreflang="uk" href="https://stroytablica.ru/uk/"/>
+  <xhtml:link rel="alternate" hreflang="be" href="https://stroytablica.ru/be/"/>
+  <xhtml:link rel="alternate" hreflang="kk" href="https://stroytablica.ru/kk/"/>
+  <xhtml:link rel="alternate" hreflang="ka" href="https://stroytablica.ru/ka/"/>
+  <xhtml:link rel="alternate" hreflang="hy" href="https://stroytablica.ru/hy/"/>
+  <xhtml:link rel="alternate" hreflang="tr" href="https://stroytablica.ru/tr/"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://stroytablica.ru/"/>
   <changefreq>weekly</changefreq><priority>0.95</priority>
 </url>
 <url>
   <loc>https://stroytablica.ru/hy/</loc>
   <xhtml:link rel="alternate" hreflang="ru" href="https://stroytablica.ru/"/>
+  <xhtml:link rel="alternate" hreflang="uk" href="https://stroytablica.ru/uk/"/>
+  <xhtml:link rel="alternate" hreflang="be" href="https://stroytablica.ru/be/"/>
+  <xhtml:link rel="alternate" hreflang="kk" href="https://stroytablica.ru/kk/"/>
   <xhtml:link rel="alternate" hreflang="ka" href="https://stroytablica.ru/ka/"/>
   <xhtml:link rel="alternate" hreflang="hy" href="https://stroytablica.ru/hy/"/>
   <xhtml:link rel="alternate" hreflang="tr" href="https://stroytablica.ru/tr/"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://stroytablica.ru/"/>
   <changefreq>weekly</changefreq><priority>0.95</priority>
 </url>
 <url>
   <loc>https://stroytablica.ru/tr/</loc>
   <xhtml:link rel="alternate" hreflang="ru" href="https://stroytablica.ru/"/>
+  <xhtml:link rel="alternate" hreflang="uk" href="https://stroytablica.ru/uk/"/>
+  <xhtml:link rel="alternate" hreflang="be" href="https://stroytablica.ru/be/"/>
+  <xhtml:link rel="alternate" hreflang="kk" href="https://stroytablica.ru/kk/"/>
   <xhtml:link rel="alternate" hreflang="ka" href="https://stroytablica.ru/ka/"/>
   <xhtml:link rel="alternate" hreflang="hy" href="https://stroytablica.ru/hy/"/>
   <xhtml:link rel="alternate" hreflang="tr" href="https://stroytablica.ru/tr/"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://stroytablica.ru/"/>
   <changefreq>weekly</changefreq><priority>0.95</priority>
 </url>
 <url><loc>https://stroytablica.ru/oshibki-v-smete-excel.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>

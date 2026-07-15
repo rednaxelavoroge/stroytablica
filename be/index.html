@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="be">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>БудаўнТабліца — ШІ-аналітык Excel-табліц для будаўніцтва. У Telegram</title>
+<meta name="description" content="Дашліце боту табліцу — улік матэрыялаў, план-факт, прайс — і задавайце пытанні звычайным тэкстам. Памылкі, дублі, зводкі — за секунды. Бясплатна да 3 файлаў на месяц, без карткі.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="БудаўнТабліца">
+<meta property="og:url" content="https://stroytablica.ru/be/">
+<meta property="og:title" content="БудаўнТабліца — Excel-табліцы адказваюць на пытанні. У Telegram">
+<meta property="og:description" content="Дашліце боту табліцу і пытайце звычайным тэкстам: памылкі ў сумах, дублі, зводкі — за секунды. Бясплатна да 3 файлаў на месяц.">
+<meta property="og:image" content="https://stroytablica.ru/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="be_BY">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="БудаўнТабліца — Excel-табліцы адказваюць на пытанні. У Telegram">
+<meta name="twitter:description" content="Дашліце боту табліцу і пытайце звычайным тэкстам: памылкі ў сумах, дублі, зводкі — за секунды. Бясплатна да 3 файлаў на месяц.">
+<meta name="twitter:image" content="https://stroytablica.ru/og.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8F%97%3C/text%3E%3C/svg%3E">
+<link rel="canonical" href="https://stroytablica.ru/be/">
+<link rel="alternate" hreflang="ru" href="https://stroytablica.ru/">
+<link rel="alternate" hreflang="uk" href="https://stroytablica.ru/uk/">
+<link rel="alternate" hreflang="be" href="https://stroytablica.ru/be/">
+<link rel="alternate" hreflang="kk" href="https://stroytablica.ru/kk/">
+<link rel="alternate" hreflang="ka" href="https://stroytablica.ru/ka/">
+<link rel="alternate" hreflang="hy" href="https://stroytablica.ru/hy/">
+<link rel="alternate" hreflang="tr" href="https://stroytablica.ru/tr/">
+<link rel="alternate" hreflang="x-default" href="https://stroytablica.ru/">
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "БудаўнТабліца", "operatingSystem": "Telegram", "applicationCategory": "BusinessApplication", "description": "ШІ-аналітык Excel для будаўнічых кампаній у Telegram. Дакладныя разлікі праз базу дадзеных.", "url": "https://stroytablica.ru/be/", "offers": [{"@type": "Offer", "name": "Бясплатны", "price": "0", "priceCurrency": "RUB"}, {"@type": "Offer", "name": "Старт", "price": "990", "priceCurrency": "RUB"}, {"@type": "Offer", "name": "Бізнес", "price": "2990", "priceCurrency": "RUB"}, {"@type": "Offer", "name": "Каманда", "price": "6900", "priceCurrency": "RUB"}]}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Бяспека?", "acceptedAnswer": {"@type": "Answer", "text": "Файл у ізаляванай БД. У нейрасетку цалкам не ідзе."}}, {"@type": "Question", "name": "Файлы?", "acceptedAnswer": {"@type": "Answer", "text": "xlsx, xls, csv, ods да 20 МБ."}}, {"@type": "Question", "name": "Office?", "acceptedAnswer": {"@type": "Answer", "text": "Не патрэбны."}}, {"@type": "Question", "name": "Цана?", "acceptedAnswer": {"@type": "Answer", "text": "3 файлы/мес бясплатна. Платныя ад 990 ₽."}}, {"@type": "Question", "name": "Краіны?", "acceptedAnswer": {"@type": "Answer", "text": "Усюды, дзе Telegram."}}]}
+</script>
+<style>
+:root{--ink:#101623;--mut:#5b6472;--amber:#f59e0b;--amber-d:#d97706;--bg:#f6f7f9;--card:#fff;--line:#e6e8ec;--tg:#2aabee;--wa:#25d366;--ok:#16a34a;--no:#dc2626}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Noto Sans',Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
+.wrap{max-width:1060px;margin:0 auto;padding:0 16px}
+nav{position:sticky;top:0;background:rgba(255,255,255,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:20}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:56px;height:auto;padding:10px 0}
+.logo{font-weight:800;font-size:1.05rem;text-decoration:none;color:var(--ink);white-space:nowrap;flex-shrink:0;max-width:42vw;overflow:hidden;text-overflow:ellipsis}
+.nav-right{display:flex;align-items:center;gap:8px;flex-shrink:0;margin-left:auto}
+nav .links{display:flex;gap:12px;align-items:center;flex-wrap:nowrap}
+nav .links a{color:var(--mut);text-decoration:none;font-size:.88rem;white-space:nowrap}
+.lang-dd{position:relative}
+.lang-dd>summary{list-style:none;cursor:pointer;font-size:.78rem;font-weight:700;padding:6px 10px;border-radius:8px;border:1px solid var(--line);color:var(--ink);background:#fff;user-select:none;white-space:nowrap}
+.lang-dd>summary::-webkit-details-marker{display:none}
+.lang-dd>summary::after{content:' ▾';opacity:.55;font-size:.7em}
+.lang-dd[open]>summary{background:var(--ink);color:#fff;border-color:var(--ink)}
+.lang-menu{position:absolute;right:0;top:calc(100% + 6px);min-width:168px;background:#fff;border:1px solid var(--line);border-radius:10px;box-shadow:0 12px 32px rgba(0,0,0,.12);padding:6px;z-index:30}
+.lang-menu a{display:flex;justify-content:space-between;gap:12px;padding:8px 10px;border-radius:7px;color:var(--ink);text-decoration:none;font-size:.86rem}
+.lang-menu a:hover{background:#f3f4f6}
+.lang-menu a.active{background:#101623;color:#fff}
+.lang-menu a span{color:var(--mut);font-size:.75rem;font-weight:700}
+.lang-menu a.active span{color:#c6cede}
+.btn{display:inline-block;background:var(--amber);color:#fff;font-weight:700;padding:13px 28px;border-radius:10px;text-decoration:none;transition:.15s;white-space:nowrap}
+.btn:hover{background:var(--amber-d)}
+.btn.sm{padding:8px 14px;font-size:.88rem}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+.hero{background:linear-gradient(160deg,#0e1726 0%,#1a2740 70%,#233252 100%);color:#fff;padding:68px 0 80px}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.hero h1{font-size:2.2rem;line-height:1.22;margin-bottom:18px;word-wrap:break-word}
+.hero h1 em{color:var(--amber);font-style:normal}
+.hero p.sub{color:#c6cede;font-size:1.05rem;margin-bottom:26px}
+.hero .note{color:#8d97ab;font-size:.9rem;margin-top:12px}
+.chat{background:#fff;border-radius:16px;padding:18px;box-shadow:0 18px 50px rgba(0,0,0,.35);max-width:430px;margin-left:auto}
+.chat .head{display:flex;align-items:center;gap:10px;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:12px}
+.chat .ava{width:34px;height:34px;border-radius:50%;background:var(--amber);display:flex;align-items:center;justify-content:center;font-size:1.05rem;flex-shrink:0}
+.chat .head b{font-size:.95rem;color:var(--ink)}
+.chat .head span{display:block;font-size:.75rem;color:var(--tg)}
+.msg{max-width:88%;padding:9px 13px;border-radius:12px;font-size:.83rem;margin-bottom:9px;color:var(--ink);white-space:pre-line}
+.msg.user{background:#e3f1fd;margin-left:auto;border-bottom-right-radius:4px}
+.msg.bot{background:#f2f3f6;border-bottom-left-radius:4px}
+.video-frame{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:16px;box-shadow:0 18px 50px rgba(0,0,0,.18);border:1px solid var(--line);background:#000}
+.video-frame iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
+section{padding:60px 0}
+section h2{font-size:1.8rem;margin-bottom:8px}
+section p.lead{color:var(--mut);margin-bottom:32px;max-width:720px;font-size:1.02rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px}
+.card .ico{font-size:1.6rem;margin-bottom:10px}
+.card h3{font-size:1.05rem;margin-bottom:8px}
+.card p{color:var(--mut);font-size:.93rem}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;counter-reset:st}
+.step{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px 24px 22px;position:relative}
+.step::before{counter-increment:st;content:counter(st);position:absolute;top:-14px;left:20px;background:var(--amber);color:#fff;font-weight:800;width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.95rem}
+.step h3{margin:6px 0;font-size:1rem}
+.step p{color:var(--mut);font-size:.92rem}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+.chip{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:9px 16px;font-size:.88rem;color:var(--ink)}
+.chip::before{content:'«'}
+.chip::after{content:'»'}
+.tblwrap{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:#fff}
+table{border-collapse:collapse;width:100%;min-width:640px;font-size:.92rem}
+th,td{padding:13px 16px;text-align:left;border-bottom:1px solid var(--line)}
+th{background:#fafbfc;font-size:.85rem;color:var(--mut)}
+td:first-child{font-weight:600}
+thead th:nth-child(2){color:var(--amber-d);font-weight:800}
+.ok{color:var(--ok);font-weight:700}
+.no{color:var(--no);font-weight:700}
+.plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;align-items:stretch}
+.plan{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px;display:flex;flex-direction:column}
+.plan.hot{border:2px solid var(--amber);position:relative}
+.plan.hot::before{content:attr(data-badge);position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--amber);color:#fff;font-size:.72rem;font-weight:700;padding:3px 12px;border-radius:20px;white-space:nowrap}
+.plan h3{font-size:1.05rem}
+.plan .price{font-size:1.9rem;font-weight:800;margin:10px 0 2px}
+.plan .price span{font-size:.85rem;font-weight:400;color:var(--mut)}
+.plan ul{list-style:none;margin:16px 0 22px;flex:1}
+.plan li{font-size:.9rem;color:var(--mut);padding:5px 0 5px 24px;position:relative}
+.plan li::before{content:'✓';position:absolute;left:2px;color:var(--amber);font-weight:700}
+.plan li.soon{font-style:italic}
+.plan li.soon::before{content:'•';color:var(--mut);font-weight:700}
+details:not(.lang-dd){background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 20px;margin-bottom:10px}
+details:not(.lang-dd) summary{font-weight:600;cursor:pointer}
+details:not(.lang-dd) p{color:var(--mut);margin-top:10px;font-size:.95rem}
+.implant{margin-top:26px;background:linear-gradient(160deg,#0e1726,#233252);border-radius:14px;padding:28px 30px;color:#fff;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.implant h3{margin-bottom:6px}
+.implant p{color:#c6cede;font-size:.95rem;max-width:640px}
+.cta-end{background:linear-gradient(160deg,#0e1726,#233252);color:#fff;text-align:center;border-radius:18px;padding:52px 28px;margin:16px 0 56px}
+.cta-end h2{margin-bottom:10px}
+.cta-end p{color:#c6cede;margin-bottom:24px}
+footer{border-top:1px solid var(--line);padding:26px 0;color:var(--mut);font-size:.9rem}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+footer a{color:var(--mut)}
+@media(max-width:1100px){nav .links>.nav-hide{display:none}}
+@media(max-width:820px){.hero .wrap{grid-template-columns:1fr}.hero h1{font-size:1.7rem}.chat{margin:0 auto}.logo{font-size:.95rem;max-width:48vw}}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+<a class="logo" href="/be/">🏗 БудаўнТабліца</a>
+<div class="nav-right">
+<div class="links">
+<span class="nav-hide"><a href="#what">Што гэта</a></span>
+<span class="nav-hide"><a href="#demo">Дэма</a></span>
+<span class="nav-hide"><a href="#feat">Магчымасці</a></span>
+<span class="nav-hide"><a href="#comp">Параўнанне</a></span>
+<span class="nav-hide"><a href="#plans">Тарыфы</a></span>
+<span class="nav-hide"><a href="#partners">Партнёрам</a></span>
+</div>
+<details class="lang-dd"><summary aria-label="Language">BE</summary><div class="lang-menu"><a href="/" hreflang="ru">Русский<span>RU</span></a><a href="/uk/" hreflang="uk">Українська<span>UK</span></a><a href="/be/" hreflang="be" class="active">Беларуская<span>BE</span></a><a href="/kk/" hreflang="kk">Қазақша<span>KK</span></a><a href="/ka/" hreflang="ka">ქართული<span>KA</span></a><a href="/hy/" hreflang="hy">Հայերեն<span>HY</span></a><a href="/tr/" hreflang="tr">Türkçe<span>TR</span></a></div></details>
+<a class="btn sm" href="https://t.me/stroytablica_bot?start=lang_be">Адкрыць бота</a>
+</div>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+<div>
+<h1>Вашы Excel-табліцы <em>адказваюць на пытанні</em>. У Telegram.</h1>
+<p class="sub">Дашліце боту ўлік матэрыялаў, план-факт ці прайс — і пытайце звычайным тэкстам, як калегу. Памылкі ў сумах, дублі, зводкі па пастаўшчыках — за секунды.</p>
+<a class="btn" href="https://t.me/stroytablica_bot?start=lang_be">Паспрабаваць бясплатна</a>
+<p class="note">3 файлы на месяц бясплатна · без карткі · без усталёўкі · без навучання</p>
+</div>
+<div class="chat">
+<div class="head"><div class="ava">🏗</div><div><b>БудаўнТабліца</b><span>бот</span></div></div>
+<div class="msg user">📎 Materials_Lugovaya12.xlsx</div>
+<div class="msg bot">✅ 603 радкі, 11 калонак. Задавайце пытанні!</div>
+<div class="msg user">Знайдзі радкі, дзе сума не сыходзіцца з кольк × цана</div>
+<div class="msg bot">⚠️ Знайшоў 6 радкоў з разыходжаннем:
+• Радок 376: Арматура А500С d16 — у файле 4 550 856 ₽, па разліку 3 374 728 ₽, адхіленне +1 176 128 ₽
+• Радок 385: Раствор М150 — +75 233 ₽…</div>
+<div class="msg user">Ці ёсць дублі?</div>
+<div class="msg bot">Так, 3 пары поўных дубляў: радкі 25 і 602, 11 і 601, 60 і 603.</div>
+</div>
+</div></header>
+
+<section id="demo"><div class="wrap">
+<h2>Глядзіце самі</h2>
+<p class="lead">Загрузка файла і пытанні звычайным тэкстам — у рэальным часе, без мантажу.</p>
+<div class="video-frame"><iframe src="https://www.youtube.com/embed/kqz7XeqbkGw" title="БудаўнТабліца — дэма" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+</div></section>
+
+<section id="what" style="background:#fff"><div class="wrap">
+<h2>Што гэта — простымі словамі</h2>
+<p class="lead">БудаўнТабліца — гэта бот у Telegram, якому вы дасылаеце свой звычайны Excel-файл. Далей пішаце пытанне словамі: «колькі патрацілі на бетон у маі?» — і праз некалькі секунд атрымліваеце дакладны адказ з лічбамі і нумарамі радкоў. Не трэба ведаць формулы і зводныя табліцы.</p>
+<div class="steps">
+<div class="step"><h3>Ваш файл</h3><p>Любая табліца: улік матэрыялаў, ведамасці, прайсы, план-факт. Як ёсць, без падрыхтоўкі.</p></div>
+<div class="step"><h3>Ваша пытанне</h3><p>Звычайнымі словамі, як калегу. З тэлефона, проста з аб'екта.</p></div>
+<div class="step"><h3>Дакладны адказ</h3><p>Лічбы лічыць база дадзеных, а не нейрасетка «на вока». Кожная знаходка — з нумарам радка.</p></div>
+</div>
+</div></section>
+
+<section id="feat"><div class="wrap">
+<h2>Што ўмее бот</h2>
+<p class="lead">Шэсць задач, якія зараз з'ядаюць гадзіны ў Excel — бот робіць за секунды.</p>
+<div class="grid">
+<div class="card"><div class="ico">🔍</div><h3>Знаходзіць памылкі ў сумах</h3><p>Сума не сыходзіцца з колькасцю × цаной? Бот знойдзе кожны такі радок і пакажа памер разыходжання.</p></div>
+<div class="card"><div class="ico">👥</div><h3>Лавіць дублі і пропускі</h3><p>Падвоеныя накладныя, паўторныя пазіцыі, пустыя цэны — усё спісам з нумарамі радкоў.</p></div>
+<div class="card"><div class="ico">📊</div><h3>Будзе зводкі</h3><p>Па пастаўшчыках, аб'ектах, месяцах, катэгорыях — па любой калонцы файла.</p></div>
+<div class="card"><div class="ico">📉</div><h3>План-факт і перавыдатак</h3><p>«Дзе перавыдатак больш за 10%?» — за секунды спіс артыкулаў і аб'ектаў з лічбамі.</p></div>
+<div class="card"><div class="ico">⚖️</div><h3>Параўноўвае прайсы</h3><p>Загрузіце прайс некалькіх пастаўшчыкоў — і пытайце, у каго танней.</p></div>
+<div class="card"><div class="ico">💰</div><h3>Сачыць за аплатамі</h3><p>«Колькі не аплачана і каму?» — імгненная карціна з вашай табліцы.</p></div>
+</div>
+<p class="lead" style="margin:34px 0 12px;font-weight:600;color:var(--ink)">Прыклады пытанняў:</p>
+<div class="chips">
+<span class="chip">Колькі патрачана на арматуру ў сакавіку?</span><span class="chip">Знайдзі радкі, дзе сума не сыходзіцца</span><span class="chip">Ці ёсць дублі?</span><span class="chip">Зводка па пастаўшчыках</span><span class="chip">У каго танней цэгла М150?</span><span class="chip">Дзе перавыдатак больш за 10%?</span><span class="chip">Топ-10 самых дарагіх закупак</span><span class="chip">Колькі не аплачана і каму?</span><span class="chip">Што куплялі ў ТД Арсенал у маі?</span><span class="chip">Сярэдняя цана бетону B25 па месяцах</span><span class="chip">Якія пазіцыі без цаны?</span><span class="chip">Параўнай план і факт па аб'екце</span>
+</div>
+</div></section>
+
+<section id="comp" style="background:#fff"><div class="wrap">
+<h2>Чаму гэтага больш нідзе няма</h2>
+<p class="lead">Прамога аналага — ШІ-аналітыка табліц у Telegram — на рынку няма. Copilot часта недаступны, ChatGPT патрабуе замежную картку і дасылае файл у нейрасетку цалкам, а ўкараненне 1С/BI — месяцы і вялікія бюджэты.</p>
+<div class="tblwrap"><table>
+<thead><tr><th></th><th>🏗 БудаўнТабліца</th><th>Microsoft Copilot</th><th>ChatGPT</th><th>Укараненне 1С / BI</th></tr></thead>
+<tbody>
+<tr><td>Даступны напрамую, замежная картка не патрэбна</td><td class="ok">Так</td><td class="no">Не — абмежаванні</td><td class="no">Не</td><td class="ok">Так</td></tr>
+<tr><td>Разумее пытанні звычайным тэкстам</td><td class="ok">Так</td><td class="ok">Так</td><td class="ok">Так</td><td class="no">Не — справаздачы наладжваюць праграмісты</td></tr>
+<tr><td>Дакладныя разлікі (лічыць база дадзеных)</td><td class="ok">Так</td><td>Часткова</td><td class="no">Не — можа «прыдумаць» лічбу</td><td class="ok">Так</td></tr>
+<tr><td>Файл цалкам НЕ ідзе ў нейрасетку</td><td class="ok">Так</td><td class="no">Не</td><td class="no">Не</td><td class="ok">Так</td></tr>
+<tr><td>Запуск без укаранення і навучання</td><td class="ok">1 хвіліна</td><td>Дні</td><td>Гадзіны</td><td class="no">Месяцы</td></tr>
+<tr><td>Цана</td><td class="ok">ад 0 ₽</td><td>~2 800 ₽/чал/мес</td><td>~2 000 ₽/мес</td><td class="no">ад 300 000 ₽</td></tr>
+</tbody>
+</table></div>
+</div></section>
+
+<section><div class="wrap">
+<h2>Каму гэта трэба</h2>
+<p class="lead">Усім у будаўнічай кампаніі, хто жыве ў табліцах.</p>
+<div class="grid">
+<div class="card"><div class="ico">📦</div><h3>Снабжэнец</h3><p>Параўнанне прайсаў, лепшая цана, кантроль заявак і аплат.</p></div>
+<div class="card"><div class="ico">👷</div><h3>Прараб / ПТО</h3><p>Улік матэрыялаў, план-факт, перавыдатак — з аб'екта, з тэлефона.</p></div>
+<div class="card"><div class="ico">💼</div><h3>Дырэктар</h3><p>Зводка па любым файле за хвіліну. Без званкоў і паседжанняў.</p></div>
+<div class="card"><div class="ico">🧮</div><h3>Бухгалтэрыя</h3><p>Зверка ведамасцей, пошук разыходжанняў і дубляў перад закрыццём месяца.</p></div>
+</div>
+</div></section>
+
+<section id="plans" style="background:#fff"><div class="wrap">
+<h2>Тарыфы</h2>
+<p class="lead">Пачніце бясплатна — без карткі і рэгістрацыі. Платы тарыф — напішыце ў Telegram, падключым на працягу гадзіны. <b>За год — два месяцы ў падарунак.</b></p>
+<div class="plans">
+<div class="plan"><h3>Бясплатны</h3><div class="price">0 ₽</div>
+<ul><li>3 файлы на месяц</li><li>15 пытанняў на файл</li><li>Файлы да 2 000 радкоў</li><li>Усе віды аналізу</li></ul>
+<a class="btn ghost" href="https://t.me/stroytablica_bot?start=lang_be">Пачаць у Telegram</a></div>
+<div class="plan"><h3>Старт</h3><div class="price">990 ₽<span>/мес</span></div>
+<ul><li>30 файлаў на месяц</li><li>Пытанні без абмежаванняў</li><li>Файлы да 20 000 радкоў</li><li>За год: 9 900 ₽ — 2 месяцы ў падарунак</li></ul>
+<a class="btn ghost" href="https://t.me/StableCent">Падключыць у Telegram</a></div>
+<div class="plan hot" data-badge="Папулярны"><h3>Бізнес</h3><div class="price">2 990 ₽<span>/мес</span></div>
+<ul><li>Файлы без ліміту</li><li>Да 200 000 радкоў</li><li>Зверка двух файлаў</li><li class="soon">КС-2 / КС-3 — хутка</li><li>За год: 29 900 ₽ — 2 месяцы ў падарунак</li></ul>
+<a class="btn" href="https://t.me/StableCent">Падключыць у Telegram</a></div>
+<div class="plan"><h3>Каманда</h3><div class="price">6 900 ₽<span>/мес</span></div>
+<ul><li>Усё з «Бізнес»</li><li>5 супрацоўнікаў</li><li>Прыярытэтная падтрымка</li><li class="soon">КС-2 / КС-3 — хутка</li><li>За год: 69 000 ₽ — 2 месяцы ў падарунак</li></ul>
+<a class="btn ghost" href="https://t.me/StableCent">Падключыць у Telegram</a></div>
+</div>
+<div class="implant">
+<div><h3>Укараненне пад ключ — для кампаній ад 20 супрацоўнікаў</h3>
+<p>Наладзім бота пад вашы файлы, навучым снабжэнцаў і ПТО, суправадзім першы месяц. Ад 15 000 ₽ + любы тарыф.</p></div>
+<a class="btn" href="https://t.me/StableCent">Абмеркаваць укараненне</a>
+</div>
+</div></section>
+
+<section id="partners"><div class="wrap">
+<h2>Партнёрам — 25% з кожнага платежу</h2>
+<p class="lead">Бухгалтарскія кампаніі, 1С-франчайзі, пастаўшчыкі будматэрыялаў: раіце БудаўнТабліца і атрымлівайце 25% ад плацяжоў прыведзенага кліента на працягу першага года.</p>
+<div class="grid">
+<div class="card"><div class="ico">🧾</div><h3>Бухгалтэрыям</h3><p>Кліенты-будаўнікі перастануць прыносіць табліцы з памылкамі — вы зарабіце на рэкамендацыі.</p></div>
+<div class="card"><div class="ico">🖥️</div><h3>1С-франчайзі</h3><p>Простае дапаўненне да ўкараненняў: тэхпадтрымку бярэм на сябе.</p></div>
+<div class="card"><div class="ico">🏗️</div><h3>Пастаўшчыкам будматэрыялаў</h3><p>Вашы пакупнікі атрымліваюць інструмент, вы — працэнт і лаяльнасць.</p></div>
+</div>
+<p style="margin-top:22px"><a class="btn" href="https://t.me/StableCent">Стаць партнёрам</a></p>
+</div></section>
+
+<section style="background:#fff"><div class="wrap">
+<h2>Частыя пытанні</h2>
+<details><summary>Куды трапляюць мае дадзеныя? Гэта бяспечна?</summary><p>Файл у ізаляванай базе на абароненым серверы. У нейрасетку табліца цалкам не ідзе — толькі назвы калонак і некалькі першых радкоў. Разлікі выконвае база дадзеных.</p></details><details><summary>Якія файлы падтрымліваюцца?</summary><p>.xlsx, .xls, .csv і .ods — Excel, LibreOffice, выгрузкі з 1С. Да 20 МБ.</p></details><details><summary>«Крывавая» табліца. Справіцца?</summary><p>Так. Бот разумее фарматы лікаў з прабеламі, падвойныя шапкі, пустыя радкі і памылкі набору.</p></details><details><summary>Ці патрэбны Microsoft Office?</summary><p>Не. Бот чытае сам файл і не ўбудоўваецца ў Excel.</p></details><details><summary>Колькі гэта каштуе?</summary><p>Бясплатны тарыф назаўжды: 3 файлы на месяц. Платныя — фіксаваная цана. За год — два месяцы ў падарунак.</p></details><details><summary>Працуе ў Беларусі, Казахстане, Украіне, Грузіі?</summary><p>Так, усюды, дзе ёсць Telegram. Адказы мовай вашага паведамлення.</p></details><details><summary>Трэба нешта асаблівае пад кампанію?</summary><p>Напішыце — дапрацоўваем: справаздачы, інтэграцыі, навучанне. Ад 20 чалавек — укараненне пад ключ.</p></details>
+</div></section>
+
+<div class="wrap"><div class="cta-end">
+<h2>Паспрабуйце на сваім файле зараз</h2>
+<p>Загрузіце табліцу — і праз хвіліну атрымаеце першы адказ. Бясплатна, без карткі.</p>
+<a class="btn" href="https://t.me/stroytablica_bot?start=lang_be">Адкрыць бота ў Telegram</a>
+</div></div>
+
+<footer><div class="wrap">
+<div>© 2026 БудаўнТабліца · Артыкулы: <a href="/oshibki-v-smete-excel.html">памылкі ў Excel</a> · <a href="/uchet-materialov-excel.html">улік матэрыялаў</a> · <a href="/neyroset-dlya-excel.html">нейрасетка для Excel</a></div>
+<div>Дакументы: <a href="/privacy.html">Палітыка канфідэнцыяльнасці</a> · <a href="/terms.html">Карыстальніцкае пагадненне</a></div>
+<div>Падключэнне і пытанні: <a href="https://t.me/StableCent">Telegram</a> · <a href="mailto:info@stroytablica.ru">info@stroytablica.ru</a> · для СНД: <a href="https://wa.me/37281952565">WhatsApp</a></div>
+</div></footer>
+
+<script>
+// Close language dropdown when clicking outside
+document.addEventListener('click',function(e){
+  document.querySelectorAll('details.lang-dd[open]').forEach(function(d){
+    if(!d.contains(e.target)) d.removeAttribute('open');
+  });
+});
+</script>
+</body>
+</html>

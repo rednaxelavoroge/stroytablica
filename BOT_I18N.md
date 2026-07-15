@@ -1,150 +1,73 @@
-# Бот: мультиязычность (RU / KA / HY)
+# Бот: мультиязычность (RU / UK / BE / KK / KA / HY / TR)
 
-Лендинг уже ведёт на deep-link:
-- RU: `https://t.me/stroytablica_bot?start=lang_ru`
-- KA: `https://t.me/stroytablica_bot?start=lang_ka`
-- HY: `https://t.me/stroytablica_bot?start=lang_hy`
-- TR: `https://t.me/stroytablica_bot?start=lang_tr`
+## Стандартный подход (как у нормальных Telegram-ботов)
 
-Код бота: Supabase edge function `tg-webhook` (проект `vntklcxszqqwbtcergrl`).  
-Перед правкой: скачать текущий код через Supabase MCP / dashboard → не переписывать с нуля.
+**Приоритет определения `ui_lang`:**
 
-## 1. Миграция
+1. **Явный выбор** — `/lang` или deep-link `?start=lang_XX` (с лендинга) → сохранить в `app.users.ui_lang`, больше не трогать автоматически.
+2. **Telegram `from.language_code`** при **первом** `/start` (создание пользователя):
+   - `ru` → ru  
+   - `uk` → uk  
+   - `be` → be  
+   - `kk` → kk  
+   - `ka` → ka  
+   - `hy` → hy  
+   - `tr` → tr  
+   - `en` / прочее → **ru** (дефолт продукта; ответы LLM всё равно на языке вопроса)
+3. **Язык сообщения** — system prompt Claude: *всегда отвечать на языке текущего вопроса пользователя* (даже если UI на другом).
+4. OS/телефон **напрямую не читаем** — у Telegram-бота единственный надёжный сигнал языка клиента это `language_code` профиля TG + текст сообщения. Это и есть «как обычно».
+
+Лендинг deep-links:
+- RU (Русский): `https://t.me/stroytablica_bot?start=lang_ru`
+- UK (Українська): `https://t.me/stroytablica_bot?start=lang_uk`
+- BE (Беларуская): `https://t.me/stroytablica_bot?start=lang_be`
+- KK (Қазақша): `https://t.me/stroytablica_bot?start=lang_kk`
+- KA (ქართული): `https://t.me/stroytablica_bot?start=lang_ka`
+- HY (Հայերեն): `https://t.me/stroytablica_bot?start=lang_hy`
+- TR (Türkçe): `https://t.me/stroytablica_bot?start=lang_tr`
+
+## Миграция
 
 ```sql
 alter table app.users
-  add column if not exists ui_lang text not null default 'ru'
-  check (ui_lang in ('ru','ka','hy','tr'));
+  add column if not exists ui_lang text not null default 'ru';
+-- при необходимости ослабить check:
+-- alter table app.users drop constraint if exists users_ui_lang_check;
+-- alter table app.users add constraint users_ui_lang_check check (ui_lang in ('ru', 'uk', 'be', 'kk', 'ka', 'hy', 'tr'));
 ```
 
-## 2. Определение языка
+## UI-строки
 
-Порядок приоритета:
+Все hardcoded-сообщения (`/start`, лимиты, ошибки, /tariffs, /support) — словарь `I18N[ui_lang][key]` с fallback на `ru`.
 
-1. Deep-link `/start lang_ka|lang_hy|lang_tr|lang_ru` (и короткие `ka|hy|tr|ru`) → сохранить в `users.ui_lang`.
-2. Команда `/lang` (кнопки RU / ქარ / Հայ / TR) → обновить `ui_lang`.
-3. Если `ui_lang` ещё default и пришёл текст на другом языке — **отвечать на языке сообщения** (system prompt).
-4. Telegram `from.language_code`: `ka`→ka, `hy`→hy, `tr`→tr, иначе `ru` (только при создании пользователя, не перезаписывать).
+**Бренд в UI** (как на лендинге):
+- ru: СтройТаблица
+- uk: БудТаблиця
+- be: БудаўнТабліца
+- kk: ҚұрылысКесте
+- ka: მშენცხრილი
+- hy: ՇինԱղյուսակ
+- tr: İnşaatTablo
 
-Реферальный `/start КОД` не трогать: если payload не `lang_*` / `ka|hy|ru` — это referral_code как сейчас.
+Убрать «по-русски» / «только на русском» из всех локалей.
 
-## 3. Убрать «только по-русски»
-
-Во всех hardcoded-строках (особенно `/start`, help, лимиты, ошибки):
-
-| Было (идея) | Стало |
-|---|---|
-| «спрашивайте по-русски» | «спрашивайте обычным текстом» / локализованный эквивалент |
-| «понимает русский» | «понимает ваш язык» |
-| system: «отвечай по-русски» | «Отвечай на том же языке, на котором задан вопрос пользователя. UI-подсказки — на языке ui_lang.» |
-
-## 4. Словарь UI (минимум)
-
-Ключи, которые точно есть в боте (имена ориентировочные — подставить по фактическому коду):
-
-- `start_welcome` — приветствие /start  
-- `file_ok` — «✅ N строк, M колонок. Задавайте вопросы!»  
-- `ask_question` / примеры  
-- `limit_files` / `limit_questions`  
-- `tariffs` / `limits`  
-- `no_file` — «Сначала пришлите Excel-файл»  
-- `error_generic`  
-- `support_ok`  
-- `compare_need_two` / paywall  
-- `lang_set` — «Язык интерфейса: …»
-
-### RU (пример start, без «по-русски»)
+## System prompt (вопросы по файлу)
 
 ```
-СтройТаблица — ИИ-аналитик Excel для стройки.
-
-Пришлите таблицу (.xlsx / .xls / .csv / .ods) и задавайте вопросы обычным текстом:
-• где сумма не сходится
-• есть ли дубли
-• сводка по поставщикам
-
-3 файла в месяц бесплатно. /tariffs · /demo · /support
-Язык: /lang
+Respond in the same language as the user's current question
+(Russian, Ukrainian, Belarusian, Kazakh, Georgian, Armenian, Turkish, etc.).
+Keep numbers, row IDs and column names exactly as in the data.
+UI language preference: {ui_lang} — use it only for fixed UI templates, not for forcing answer language.
 ```
 
+## Команды / regex
 
-### TR
+Русские триггеры сверки + синонимы (uk/be/kk/ka/hy/tr) или роутинг через LLM.
 
-```
-СтройТаблица — İnşaat için Excel AI analisti.
+## Критерии
 
-Tablo gönderin (.xlsx / .xls / .csv / .ods) ve soruları düz metinle sorun:
-• toplamın tutmadığı yerler
-• kopya var mı
-• tedarikçi özeti
-
-Ayda 3 dosya ücretsiz. /tariffs · /demo · /support
-Dil: /lang
-```
-
-### KA
-
-```
-СтройТаблица — Excel-ცხრილების AI-ანალიტიკოსი მშენებლობისთვის.
-
-გამოგზავნეთ ცხრილი (.xlsx / .xls / .csv / .ods) და დასვით კითხვები ჩვეულებრივი ტექსტით:
-• სად არ ემთხვევა ჯამი
-• არის თუ არა დუბლიკატები
-• შეჯამება მომწოდებლების მიხედვით
-
-3 ფაილი თვეში უფასოდ. /tariffs · /demo · /support
-ენა: /lang
-```
-
-### HY
-
-```
-СтройТаблица — Excel-աղյուսակների AI-վերլուծաբան շինարարության համար.
-
-Ուղարկեք աղյուսակ (.xlsx / .xls / .csv / .ods) և տվեք հարցեր սովորական տեքստով.
-• որտեղ գումարը չի համընկնում
-• կա՞ն կրկնօրինակներ
-• ամփոփում մատակարարների համաձայն
-
-3 ֆայլ ամսում անվճար. /tariffs · /demo · /support
-Լեզու. /lang
-```
-
-## 5. System prompt для Claude (вопросы по файлу)
-
-Добавить в system (или user context):
-
-```
-Respond in the same language as the user's question.
-If the question is in Georgian, answer in Georgian.
-If in Armenian, answer in Armenian.
-If in Turkish, answer in Turkish.
-If in Russian, answer in Russian.
-Keep numbers, row IDs, and column names exactly as in the data.
-UI language preference of the user: {ui_lang}.
-```
-
-Не писать «always answer in Russian».
-
-## 6. Команды с regex
-
-Сейчас сверка/команды завязаны на русские слова (`сверь`, `сравни`…).  
-Добавить синонимы:
-
-- KA: შეადარე, შედარება, შეჯერება  
-- HY: համեմատիր, համադրիր, համեմատություն  
-
-Либо: если intent «сверка» не сработал по regex — пусть LLM-роутер / обычный вопрос.
-
-## 7. Критерии приёмки
-
-1. С лендинга `/ka/` кнопка «ბოტის გახსნა» → `/start lang_ka` → welcome на грузинском.  
-2. С `/hy/` → welcome на армянском.
-2b. С `/tr/` → welcome на турецком.  
-3. Вопрос на грузинском по загруженному файлу → ответ на грузинском.  
-4. В welcome и help нет фразы «по-русски» / «только на русском».  
-5. Реферальный `/start PARTNERCODE` по-прежнему работает.
-
-## 8. Деплой
-
-После правок: `deploy_edge_function` tg-webhook, ручной тест с трёх аккаунтов (или смена language_code + deep-link).
+1. Новый user с TG language_code=uk → welcome на украинском (бренд БудТаблиця).
+2. `/start lang_kk` с лендинга → казахский UI.
+3. Вопрос на грузинском → ответ на грузинском, даже если ui_lang=ru.
+4. `/lang` позволяет сменить вручную.
+5. Реферальный `/start CODE` не ломается.
