@@ -102,10 +102,10 @@ td:first-child{font-weight:600}
 thead th:nth-child(2){color:var(--amber-d);font-weight:800}
 .ok{color:var(--ok);font-weight:700}
 .no{color:var(--no);font-weight:700}
-.plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;align-items:stretch}
+.plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;align-items:stretch;padding-top:14px;overflow:visible}
 .plan{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px;display:flex;flex-direction:column}
 .plan.hot{border:2px solid var(--amber);position:relative}
-.plan.hot::before{content:attr(data-badge);position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--amber);color:#fff;font-size:. 72rem;font-weight:700;padding:3px 12px;border-radius:20px;white-space:nowrap}
+.plan.hot::before{content:attr(data-badge);position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:var(--amber);color:#fff;font-size:.72rem;font-weight:700;padding:3px 12px;border-radius:20px;white-space:nowrap;z-index:2;line-height:1.2}
 .plan h3{font-size:1. 05rem}
 .plan .price{font-size:1. 9rem;font-weight:800;margin:10px 0 2px}
 .plan .price span{font-size:. 85rem;font-weight:400;color:var(--mut)}
@@ -139,8 +139,8 @@ footer a{color:var(--mut)}
 .nav-right .btn.sm{flex-shrink:0}
 
 
-.plans{grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
-.plan{min-width:0;overflow:hidden}
+.plans{grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;padding-top:14px;overflow:visible}
+.plan{min-width:0;overflow:visible}
 .plan a.btn,.plan .btn{width:100%!important;max-width:100%!important;display:block!important;box-sizing:border-box!important;padding:10px 8px!important;font-size:. 8rem!important;font-weight:700;line-height:1. 2!important;white-space:normal!important;word-break:break-word!important;text-align:center!important;overflow-wrap:anywhere}
 .btn{white-space:normal;text-align:center;line-height:1. 25;max-width:100%}
 .btn.sm{padding:8px 10px;font-size:. 8rem}
