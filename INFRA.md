@@ -1,7 +1,7 @@
 # Инфраструктура
 
 ## Supabase
-- Аккаунт: edwardsonin1@gmail.com (проект перенесён туда, один проект в аккаунте).
+- Аккаунт: e***n1@gmail.com (проект перенесён туда, один проект в аккаунте).
 - Проект: `stroy-tablica`, ref `vntklcxszqqwbtcergrl`, регион eu-central-1.
 - Статус на 2026-10-05: на паузе (INACTIVE). Бот не отвечает, пока проект не возобновлён.
 - Также виден через Supabase MCP в организации "MEM Cash's projects" (Vercel-интеграция), где ещё два активных проекта (Roscash, AIMark Platform).
