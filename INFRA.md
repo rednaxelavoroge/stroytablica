@@ -2,9 +2,10 @@
 
 ## Supabase
 - Аккаунт: e***n1@gmail.com (проект перенесён туда, один проект в аккаунте).
-- Проект: `stroy-tablica`, ref `vntklcxszqqwbtcergrl`, регион eu-central-1.
-- Статус на 2026-10-05: на паузе (INACTIVE). Бот не отвечает, пока проект не возобновлён.
-- Также виден через Supabase MCP в организации "MEM Cash's projects" (Vercel-интеграция), где ещё два активных проекта (Roscash, AIMark Platform).
+- Рабочий проект: ref `kyezzruvogdvehnjvtwi` (ap-northeast-1). Схема и функции пересобраны 2026-10-05 из кода (`supabase/migrations`, `supabase/functions`).
+- Старый проект `stroy-tablica` (`vntklcxszqqwbtcergrl`, eu-central-1) остался на паузе в организации "MEM Cash's projects"; данных там были только тесты, его можно удалить.
+- Webhook Telegram: `https://kyezzruvogdvehnjvtwi.supabase.co/functions/v1/tg-webhook`.
+- Оплата Platega отключена (секреты PLATEGA_* не заданы), бот отвечает «оплата недоступна, /support».
 
 ## Edge Functions
 `tg-webhook` (бэкап кода: `supabase/functions/tg-webhook/`), `platega-callback`, `subscription-cron`, `landing`, `setup-storage`.
